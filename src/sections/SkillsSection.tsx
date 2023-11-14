@@ -51,7 +51,15 @@ export default function SkillsSection() {
                 }
 
                 .skills_box {
-                    width: 500px;
+                    width: 600px;
+                    margin-bottom: 50px;
+                }
+
+                @media screen and (max-width: 760px) {
+                    .skills_box {
+                        width: 350px;
+                        margin-bottom: 30px;
+                    }
                 }
 
                 .title_box {
