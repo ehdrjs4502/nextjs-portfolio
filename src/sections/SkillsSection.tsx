@@ -8,6 +8,7 @@ import NotionIcon from "../../public/icons/notion-color.svg";
 import FigmaIcon from "../../public/icons/figma-color.svg";
 import GithubIcon from "../../public/icons/github-color.svg";
 import SkillBox from "@/components/SkillBox";
+import Title from "@/components/Title";
 
 export default function SkillsSection() {
     return (
@@ -15,10 +16,7 @@ export default function SkillsSection() {
             <section className="skills-section">
                 <div>
                     <div className="skills-box">
-                        <div className="title-box">
-                            <h4>Skills</h4>
-                            <h5>사용 가능한 기술 목록입니다.</h5>
-                        </div>
+                        <Title title="Skills" subTitle="사용 가능한 기술 목록입니다." />
                         <SkillBox
                             icons={[
                                 <JsIcon />,
@@ -31,10 +29,7 @@ export default function SkillsSection() {
                         />
                     </div>
                     <div className="skills-box">
-                        <div className="title-box">
-                            <h4>ETC</h4>
-                            <h5>개발에 필요한 도구 사용 목록입니다.</h5>
-                        </div>
+                        <Title title="ETC" subTitle="개발에 필요한 도구 사용 목록입니다." />
                         <SkillBox icons={[<GithubIcon />, <FigmaIcon />, <NotionIcon />]} />
                     </div>
                 </div>
