@@ -12,10 +12,10 @@ import SkillBox from "@/components/SkillBox";
 export default function SkillsSection() {
     return (
         <>
-            <section className="skills_section">
+            <section className="skills-section">
                 <div>
-                    <div className="skills_box">
-                        <div className="title_box">
+                    <div className="skills-box">
+                        <div className="title-box">
                             <h4>Skills</h4>
                             <h5>사용 가능한 기술 목록입니다.</h5>
                         </div>
@@ -30,8 +30,8 @@ export default function SkillsSection() {
                             ]}
                         />
                     </div>
-                    <div className="skills_box">
-                        <div className="title_box">
+                    <div className="skills-box">
+                        <div className="title-box">
                             <h4>ETC</h4>
                             <h5>개발에 필요한 도구 사용 목록입니다.</h5>
                         </div>
@@ -41,7 +41,7 @@ export default function SkillsSection() {
             </section>
 
             <style jsx>{`
-                .skills_section {
+                .skills-section {
                     width: 100%;
                     height: 100vh;
                     min-height: 800px;
@@ -50,19 +50,19 @@ export default function SkillsSection() {
                     align-items: center;
                 }
 
-                .skills_box {
+                .skills-box {
                     width: 600px;
                     margin-bottom: 50px;
                 }
 
                 @media screen and (max-width: 760px) {
-                    .skills_box {
+                    .skills-box {
                         width: 350px;
                         margin-bottom: 30px;
                     }
                 }
 
-                .title_box {
+                .title-box {
                     text-align: center;
                     display: flex;
                     flex-direction: column;
@@ -71,13 +71,13 @@ export default function SkillsSection() {
                     margin-bottom: 32px;
                 }
 
-                .title_box h4 {
+                .title-box h4 {
                     font-size: 34px;
                     margin: 0;
                     margin-top: 14px;
                 }
 
-                .title_box h5 {
+                .title-box h5 {
                     color: #b3b3b3;
                 }
             `}</style>
