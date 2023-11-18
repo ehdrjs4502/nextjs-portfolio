@@ -27,9 +27,44 @@ export default function ProjectTimeLineSection() {
             ],
         },
         {
-            date: "2023. 09 ~ 12 (4개월)",
-            name: "프로젝트2",
-            summaryList: ["로그인 구현", "로그아웃 구현"],
+            date: "2023. 03 ~ 06 (4개월)",
+            name: "Save Song!",
+            summaryList: [
+                <span>
+                    <strong>React.js, TypeScript. Node.js</strong>를 활용한 개인 프로젝트
+                </span>,
+                <span>
+                    <strong>last.fm Open API</strong>를 통한 노래 검색 기능 구현
+                </span>,
+                <span>
+                    다른 사용자와 노래 공유할 수 있도록 <strong>사용자 검색 기능 및 팔로우 기능 구현</strong>
+                </span>,
+                <span>
+                    <strong>Youtube API</strong>를 통해 노래 재생 기능 구현
+                </span>,
+                <span>
+                    <strong>Python Selenium</strong>을 활용하여 tj 노래방 인기차트 크롤링 및 데이터베이스에 저장 기능
+                    구현
+                </span>,
+            ],
+        },
+        {
+            date: "2022. 09 ~ 12 (4개월)",
+            name: "연도별 자연재해 시각화 웹 사이트",
+            summaryList: [
+                <span>
+                    <strong>React.js, Node.js</strong>를 활용한 개인 프로젝트
+                </span>,
+                <span>
+                    <strong>Apex.js 라이브러리</strong>를 통한 자연재해 피해량 차트 구현
+                </span>,
+                <span>
+                    행정지도 SVG 를 활용해 시도별 <strong>자연재해 피해량 시각화</strong> 구현
+                </span>,
+                <span>
+                    <strong>Python Selenium</strong>을 활용하여 국민재난안전포털 데이터 크롤링 및 DB 저장 구현
+                </span>,
+            ],
         },
     ];
     return (
@@ -49,7 +84,7 @@ export default function ProjectTimeLineSection() {
                                 <h2>{project.name}</h2>
                                 <ul>
                                     {project.summaryList.map((text) => (
-                                        <li>{text}</li>
+                                        <li className="summary">{text}</li>
                                     ))}
                                 </ul>
                             </div>
@@ -61,7 +96,7 @@ export default function ProjectTimeLineSection() {
             <style jsx>{`
                 .timeline-section {
                     width: 100%;
-                    height: 100vh;
+                    height: 100%;
                     min-height: 800px;
                     display: flex;
                     justify-content: center;
@@ -110,6 +145,10 @@ export default function ProjectTimeLineSection() {
                 .date span {
                     color: #5ba6ff;
                     font-weight: 600;
+                }
+
+                .summary {
+                    line-height: 50px;
                 }
             `}</style>
         </>
