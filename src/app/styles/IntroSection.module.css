@@ -1,0 +1,77 @@
+.section {
+    width: 100%;
+    height: 100vh;
+    min-height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.introBox {
+    width: 650px;
+}
+
+.titleBox {
+    text-align: center;
+}
+
+.titleBox h4 {
+    font-size: 38px;
+    margin: 0;
+    margin-top: 14px;
+}
+
+.titleBox h5 {
+    font-size: 32px;
+    margin: 0;
+    margin-top: 14px;
+}
+
+.imgBox {
+    width: 190px;
+    height: 250px;
+    background-color: gray;
+}
+
+.infoBox {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.info {
+    display: grid;
+    grid-gap: 1.5rem;
+    grid-template-rows: repeat(4, 1fr);
+    height: 100%;
+}
+
+.info div {
+    padding: 10px;
+    border: 1px solid #b5b5b5;
+    border-radius: 14px;
+}
+
+.info div span {
+    display: inline-block;
+    width: 70px;
+}
+
+.aboutBox {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+    height: 200px;
+}
+
+.aboutBox h5 {
+    font-size: 32px;
+    margin: 0;
+    margin-top: 14px;
+}
+
+.strongBlue {
+    color: #5ba6ff;
+}
