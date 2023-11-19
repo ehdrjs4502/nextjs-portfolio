@@ -9,7 +9,7 @@ import FigmaIcon from "../../../public/icons/figma-color.svg";
 import GithubIcon from "../../../public/icons/github-color.svg";
 import SkillBox from "@/app/_components/SkillBox";
 import Title from "@/app/_components/Title";
-import styles from "@/app/styles/SkillsSection.module.css";
+import styles from "@/app/_styles/sections/SkillsSection.module.css";
 
 export default function SkillsSection() {
     return (

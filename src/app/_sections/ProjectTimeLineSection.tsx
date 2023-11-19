@@ -1,5 +1,5 @@
 import Title from "@/app/_components/Title";
-import styles from "@/app/styles/ProjectTimeLineSection.module.css";
+import styles from "@/app/_styles/sections/ProjectTimeLineSection.module.css";
 
 export default function ProjectTimeLineSection() {
     const projectList = [

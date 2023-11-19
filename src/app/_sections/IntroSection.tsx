@@ -1,4 +1,4 @@
-import styles from "@/app/styles/IntroSection.module.css";
+import styles from "@/app/_styles/sections/IntroSection.module.css";
 
 export default function IntroSection() {
     return (
@@ -21,7 +21,7 @@ export default function IntroSection() {
                             </div>
                             <div>
                                 <span>Phone</span>
-                                <strong>010-9243-4502</strong>
+                                <strong>010-1234-5678</strong>
                             </div>
                             <div>
                                 <span>Mail</span>
