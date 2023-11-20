@@ -3,11 +3,11 @@ import ProjectTimeLineSection from "./_sections/ProjectTimeLineSection";
 import SkillsSection from "./_sections/SkillsSection";
 
 export default function Home() {
-    return (
-        <>
-            <IntroSection />
-            <SkillsSection />
-            <ProjectTimeLineSection />
-        </>
-    );
+  return (
+    <>
+      <IntroSection />
+      <SkillsSection />
+      <ProjectTimeLineSection />
+    </>
+  );
 }
