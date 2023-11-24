@@ -69,7 +69,7 @@ export default function ProjectTimeLineSection() {
   ];
   return (
     <>
-      <div className={styles.section}>
+      <section className={styles.section}>
         <div>
           <Title
             title="프로젝트 타임라인"
@@ -91,7 +91,7 @@ export default function ProjectTimeLineSection() {
             ))}
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }
