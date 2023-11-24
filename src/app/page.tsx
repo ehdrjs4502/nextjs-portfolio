@@ -1,4 +1,5 @@
 import IntroSection from "./_sections/IntroSection";
+import ProjectDetailSection from "./_sections/ProjectDetailSection";
 import ProjectTimeLineSection from "./_sections/ProjectTimeLineSection";
 import SkillsSection from "./_sections/SkillsSection";
 
@@ -8,6 +9,7 @@ export default function Home() {
       <IntroSection />
       <SkillsSection />
       <ProjectTimeLineSection />
+      <ProjectDetailSection />
     </>
   );
 }
