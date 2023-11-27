@@ -10,3 +10,15 @@
 .box {
     width: 960px;
 }
+
+@media screen and (max-width: 760px) {
+    .box {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .box {
+        width: 340px;
+    }
+}

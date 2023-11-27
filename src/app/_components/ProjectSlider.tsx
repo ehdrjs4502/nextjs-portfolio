@@ -28,7 +28,7 @@ export default function ProjectSlider() {
       ),
       skills: ["Next.js", "typescript"],
       links: ["https://github.com/ehdrjs4502/assemblog", "https://assemblog.vercel.app/"],
-      imgs: ["assemblog1.png", "assemblog2.png", "assemblog3.png"],
+      imgs: ["assemblog1.png", "assemblog2.png", "assemblog3.png", "assemblog4.png"],
     },
     {
       title: "assemblog",

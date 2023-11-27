@@ -16,13 +16,16 @@ export default function ProjectDetail({ project }: ProjectProps) {
     speed: 500, // 속도
     slidesToShow: 1, // 한 번에 보여줄 슬라이드 개수
     slidesToScroll: 1, // 한 번에 넘어가는 슬라이드 개수
+    draggable: false, // 마우스 드래그로 슬라이드 전환 비활성화
+    autoplay: true, // 자동으로 슬라이드 넘기기
+    autoplaySpeed: 2000, // 자동으로 넘기는 속도
   };
   return (
     <div className={styles.box}>
-      <div style={{ width: "300px" }}>
+      <div style={{ width: "400px" }}>
         <Slider {...settings}>
           {project.imgs.map((img, idx: number) => (
-            <Image src={`/images/${img}`} width={350} height={300} alt="이미지" />
+            <Image key={idx} src={`/images/${img}`} width={380} height={320} alt="이미지" />
           ))}
         </Slider>
       </div>
@@ -35,8 +38,12 @@ export default function ProjectDetail({ project }: ProjectProps) {
         </div>
         <div>
           <h4>링크</h4>
-          <Link href={project.links[0]}>깃허브</Link>
-          <Link href={project.links[1]}>페이지</Link>
+          <Link href={project.links[0]} target="_blank">
+            깃허브
+          </Link>
+          <Link href={project.links[1]} target="_blank">
+            페이지
+          </Link>
         </div>
       </div>
     </div>
