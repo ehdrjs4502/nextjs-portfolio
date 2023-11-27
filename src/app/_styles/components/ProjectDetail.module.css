@@ -1,4 +1,18 @@
 .box {
     display: flex;
     justify-content: space-around;
+    background-color: rgb(240, 240, 240);
+    border-radius: 18px;
+    align-items: center;
+    padding-bottom: 48px;
+    padding-top: 48px;
+}
+
+.infoBox {
+    width: 40%;
+    min-height: 300px;
+}
+
+.content {
+    text-align: justify;
 }

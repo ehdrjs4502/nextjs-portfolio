@@ -3,13 +3,14 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ProjectDetail from "./ProjectDetail";
+import { ReactNode } from "react";
 
 // 자식 컴포넌트에서도 타입 설정해야하니 export로 만들어줌
 export type Project = {
   title: string;
-  content: string;
+  content: ReactNode;
   skills: string[];
-  github: string;
+  links: string[];
   imgs: string[];
 };
 
@@ -17,19 +18,40 @@ export default function ProjectSlider() {
   const projectList: Project[] = [
     {
       title: "assemblog",
-      content: `프로젝트를 통해 Next.js의 핵심 개념 및 기능을 습득했습니다. 주로 SSG와 SSR을 통한 SEO 최적화, ISR을 활용한 동적 게시글 업데이트, 그리고 Next/Image를 이용한 이미지 최적화에 집중했습니다. 백엔드와의 협업을 통해 클라이언트와 서버 렌더링의 협업 방식을 익히고, 프로젝트에서 발생한 다양한 문제를 해결하며 성장했습니다. 이 경험은 웹 개발 및 프론트엔드 기술에 대한 실질적인 이해를 제공했으며, 문제 해결과 기술 습득을 통한 성장 기회였습니다.`,
+      content: (
+        <span>
+          2인 공동 개발 블로그입니다. <strong>Next.js</strong>의 <strong>Page Router</strong>를 사용하여 개발하였습니다.
+          주로 <strong>SSG</strong>와 <strong>SSR</strong>을 통한 <strong>SEO 최적화</strong>, <strong>ISR</strong>을
+          활용한 동적 게시글 업데이트, 그리고 <strong>Next/Image</strong>를 이용한 <strong>이미지 최적화</strong>에
+          집중했습니다.
+        </span>
+      ),
       skills: ["Next.js", "typescript"],
-      github: "https://github.com/ehdrjs4502/assemblog",
+      links: ["https://github.com/ehdrjs4502/assemblog", "https://assemblog.vercel.app/"],
+      imgs: ["assemblog1.png", "assemblog2.png", "assemblog3.png"],
+    },
+    {
+      title: "assemblog",
+      content: (
+        <span>
+          2인 공동 개발 블로그입니다. <strong>Next.js</strong>의 <strong>Page Router</strong>를 사용하여 개발하였습니다.
+          주로 <strong>SSG</strong>와 <strong>SSR</strong>을 통한 <strong>SEO 최적화</strong>, <strong>ISR</strong>을
+          활용한 동적 게시글 업데이트, 그리고 <strong>Next/Image</strong>를 이용한 <strong>이미지 최적화</strong>에
+          집중했습니다.
+        </span>
+      ),
+      skills: ["Next.js", "typescript"],
+      links: ["https://github.com/ehdrjs4502/assemblog", ""],
       imgs: ["img1", "img2"],
     },
   ];
+
   const settings = {
     dots: true, // 캐러셀 밑에 ... 을 표시할지
     infinite: true, // 슬라이드가 끝까지 가면 다시 처음으로 반복
     speed: 500, // 속도
     slidesToShow: 1, // 한 번에 보여줄 슬라이드 개수
     slidesToScroll: 1, // 한 번에 넘어가는 슬라이드 개수
-    arrows: true,
   };
 
   return (
