@@ -1,4 +1,6 @@
 import styles from "@/app/_styles/sections/IntroSection.module.css";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function IntroSection() {
   return (
@@ -13,7 +15,15 @@ export default function IntroSection() {
           </div>
 
           <div className={styles.infoBox}>
-            <div className={styles.imgBox}>증명사진</div>
+            <div className={styles.imgBox}>
+              <Image
+                src="/images/profile-img.jpg"
+                alt="프로필"
+                width={200}
+                height={250}
+                style={{ borderRadius: "18px" }}
+              />
+            </div>
             <div className={styles.info}>
               <div>
                 <span>Name</span>
@@ -21,7 +31,7 @@ export default function IntroSection() {
               </div>
               <div>
                 <span>Phone</span>
-                <strong>010-1234-5678</strong>
+                <strong>010-9243-4502</strong>
               </div>
               <div>
                 <span>Mail</span>
@@ -29,7 +39,11 @@ export default function IntroSection() {
               </div>
               <div>
                 <span>Github</span>
-                <strong>github.com/ehdrjs4502</strong>
+                <strong>
+                  <Link href="https://github.com/ehdrjs4502" target="_blank">
+                    github.com/ehdrjs4502
+                  </Link>
+                </strong>
               </div>
             </div>
           </div>
