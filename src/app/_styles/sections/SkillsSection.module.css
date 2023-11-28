@@ -12,9 +12,16 @@
     margin-bottom: 50px;
 }
 
-@media screen and (max-width: 760px) {
+/* 태블릿 세로 */
+@media screen and (max-width: 768px) {
     .box {
-        width: 350px;
-        margin-bottom: 30px;
+        width: 600px;
+    }
+}
+
+/* 모바일 세로 */
+@media screen and (max-width: 480px) {
+    .box {
+        width: 340px;
     }
 }

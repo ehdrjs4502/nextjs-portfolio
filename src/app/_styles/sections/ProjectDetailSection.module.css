@@ -11,13 +11,15 @@
     width: 960px;
 }
 
-@media screen and (max-width: 760px) {
+/* 태블릿 세로 */
+@media screen and (max-width: 768px) {
     .box {
-        width: 400px;
+        width: 600px;
     }
 }
 
-@media screen and (max-width: 390px) {
+/* 모바일 세로 */
+@media screen and (max-width: 480px) {
     .box {
         width: 340px;
     }

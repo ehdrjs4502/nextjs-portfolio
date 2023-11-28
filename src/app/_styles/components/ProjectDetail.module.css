@@ -17,7 +17,7 @@
     text-align: justify;
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 768px) {
     .box {
         display: flex;
         flex-direction: column;
