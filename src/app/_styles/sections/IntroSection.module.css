@@ -70,3 +70,29 @@
 .strongBlue {
     color: #5ba6ff;
 }
+
+/* 태블릿 세로 */
+@media screen and (max-width: 768px) {
+    .infoBox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info {
+        margin-top: 24px;
+    }
+}
+
+/* 모바일 세로 */
+@media screen and (max-width: 480px) {
+    .infoBox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info {
+        margin-top: 24px;
+    }
+}
