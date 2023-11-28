@@ -6,11 +6,23 @@
     align-items: center;
     padding-bottom: 48px;
     padding-top: 48px;
+    padding-left: 20px;
 }
+
+.slideImageBox {
+    width: 45%;
+}
+
 
 .infoBox {
     width: 40%;
     min-height: 320px;
+}
+
+.slideImage {
+    position: "relative";
+    width: "400px";
+    height: "300px";
 }
 
 .content {
@@ -21,7 +33,13 @@
     .box {
         display: flex;
         flex-direction: column;
+        padding-left: 0px;
     }
+
+    .slideImageBox {
+        width: 80%;
+    }
+
 
     .infoBox {
         width: 80%;

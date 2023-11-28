@@ -22,10 +22,14 @@ export default function ProjectDetail({ project }: ProjectProps) {
   };
   return (
     <div className={styles.box}>
-      <div style={{ width: "400px" }}>
+      <div className={styles.slideImageBox}>
         <Slider {...settings}>
           {project.imgs.map((img, idx: number) => (
-            <Image key={idx} src={`/images/${img}`} width={380} height={320} alt="이미지" />
+            <div>
+              <div className="slide-img">
+                <Image key={idx} src={`/images/${img}`} fill alt="이미지" />
+              </div>
+            </div>
           ))}
         </Slider>
       </div>
@@ -46,6 +50,21 @@ export default function ProjectDetail({ project }: ProjectProps) {
           </Link>
         </div>
       </div>
+
+      <style jsx>{`
+        .slide-img {
+          position: relative;
+          width: 100%;
+          height: 300px;
+          border-radius: 20px;
+        }
+
+        @media (max-width: 768px) {
+          .slide-img {
+            height: 200px; // 작은 화면 크기에 대한 높이
+          }
+        }
+      `}</style>
     </div>
   );
 }
