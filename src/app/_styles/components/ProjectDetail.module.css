@@ -29,6 +29,10 @@
     text-align: justify;
 }
 
+.linkBox {
+    margin-top: 12px;
+}
+
 @media screen and (max-width: 768px) {
     .box {
         display: flex;

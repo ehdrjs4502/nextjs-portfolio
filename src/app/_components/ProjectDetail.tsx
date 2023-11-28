@@ -3,6 +3,9 @@ import { Project } from "./ProjectSlider"; // 부모에서 지정한 타입 불�
 import Link from "next/link";
 import Image from "next/image";
 import Slider from "react-slick";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import HomeIcon from "@mui/icons-material/Home";
+import { Tooltip } from "@mui/material";
 
 // props 타입 부모에 있는 Project 타입으로 설정
 type ProjectProps = {
@@ -25,9 +28,9 @@ export default function ProjectDetail({ project }: ProjectProps) {
       <div className={styles.slideImageBox}>
         <Slider {...settings}>
           {project.imgs.map((img, idx: number) => (
-            <div>
+            <div key={idx}>
               <div className="slide-img">
-                <Image key={idx} src={`/images/${img}`} fill alt="이미지" />
+                <Image key={idx} src={`/images/${img}`} sizes="(max-width: 768px) 100vw" fill alt="이미지" />
               </div>
             </div>
           ))}
@@ -40,13 +43,17 @@ export default function ProjectDetail({ project }: ProjectProps) {
           <h4>사용 기술</h4>
           {project.skills.join(", ")}
         </div>
-        <div>
+        <div className={styles.linkBox}>
           <h4>링크</h4>
           <Link href={project.links[0]} target="_blank">
-            깃허브
+            <Tooltip title="깃허브로 이동" arrow placement="top">
+              <GitHubIcon />
+            </Tooltip>
           </Link>
           <Link href={project.links[1]} target="_blank">
-            페이지
+            <Tooltip title="페이지로 이동" arrow placement="top">
+              <HomeIcon />
+            </Tooltip>
           </Link>
         </div>
       </div>
@@ -56,12 +63,11 @@ export default function ProjectDetail({ project }: ProjectProps) {
           position: relative;
           width: 100%;
           height: 300px;
-          border-radius: 20px;
         }
 
         @media (max-width: 768px) {
           .slide-img {
-            height: 200px; // 작은 화면 크기에 대한 높이
+            height: 240px;
           }
         }
       `}</style>
