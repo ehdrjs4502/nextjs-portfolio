@@ -1,11 +1,9 @@
 import styles from "@/app/_styles/components/ProjectDetail.module.css";
-import { Project } from "./ProjectSlider"; // 부모에서 지정한 타입 불러오기
-import Link from "next/link";
+import { Project } from "../_data/projectDetailsData"; // 데이터에서 지정한 타입 불러오기
 import Image from "next/image";
 import Slider from "react-slick";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import HomeIcon from "@mui/icons-material/Home";
-import { Tooltip } from "@mui/material";
+import GithubLink from "./GithubLink";
+import PageLink from "./PageLink";
 
 // props 타입 부모에 있는 Project 타입으로 설정
 type ProjectProps = {
@@ -39,22 +37,14 @@ export default function ProjectDetail({ project }: ProjectProps) {
       <div className={styles.infoBox}>
         <h1>{project.title}</h1>
         <p className={styles.content}>{project.content}</p>
-        <div>
+        <div className={styles.skillBox}>
           <h4>사용 기술</h4>
           {project.skills.join(", ")}
         </div>
         <div className={styles.linkBox}>
           <h4>링크</h4>
-          <Link href={project.links[0]} target="_blank">
-            <Tooltip title="깃허브로 이동" arrow placement="top">
-              <GitHubIcon />
-            </Tooltip>
-          </Link>
-          <Link href={project.links[1]} target="_blank">
-            <Tooltip title="페이지로 이동" arrow placement="top">
-              <HomeIcon />
-            </Tooltip>
-          </Link>
+          <GithubLink url={project.links[0]} />
+          <PageLink url={project.links[1]} />
         </div>
       </div>
 

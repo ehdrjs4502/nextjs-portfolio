@@ -29,8 +29,20 @@
     text-align: justify;
 }
 
+.skillBox h4 {
+    margin-bottom: 10px;
+}
+
 .linkBox {
     margin-top: 12px;
+}
+
+.linkBox h4 {
+    margin-bottom: 10px;
+}
+
+.linkBox a {
+    margin-right: 12px;
 }
 
 @media screen and (max-width: 768px) {
