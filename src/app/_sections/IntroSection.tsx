@@ -10,7 +10,7 @@ export default function IntroSection() {
           <div className={styles.titleBox}>
             <h4>안녕하세요!</h4>
             <h5>
-              <strong className={styles.strogBlue}>프론트엔드 개발자</strong> 김동건입니다.
+              <strong className={styles.strongBlue}>프론트엔드 개발자</strong> 김동건입니다.
             </h5>
           </div>
 
