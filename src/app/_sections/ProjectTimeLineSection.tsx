@@ -6,6 +6,7 @@ export default function ProjectTimeLineSection() {
     {
       date: "2023. 06 ~ 08 (3개월)",
       name: "assemblog",
+      projectType: [<span>팀 프로젝트(2명) / 프론트엔드 담당</span>],
       summaryList: [
         <span>
           <strong>Next.js</strong>를 활용하여 개발한 2인 공동 블로그 개발 프로젝트
@@ -30,6 +31,7 @@ export default function ProjectTimeLineSection() {
     {
       date: "2023. 03 ~ 06 (4개월)",
       name: "Save Song!",
+      projectType: [<span>개인 프로젝트</span>],
       summaryList: [
         <span>
           <strong>React.js, TypeScript. Node.js</strong>를 활용한 개인 프로젝트
@@ -51,6 +53,7 @@ export default function ProjectTimeLineSection() {
     {
       date: "2022. 09 ~ 12 (4개월)",
       name: "연도별 자연재해 시각화 웹 사이트",
+      projectType: [<span>개인 프로젝트</span>],
       summaryList: [
         <span>
           <strong>React.js, Node.js</strong>를 활용한 개인 프로젝트
@@ -82,6 +85,7 @@ export default function ProjectTimeLineSection() {
                   <span>{project.date}</span>
                 </div>
                 <h2>{project.name}</h2>
+                <span className={styles.type}>{project.projectType}</span>
                 <ul>
                   {project.summaryList.map((text) => (
                     <li className={styles.summary}>{text}</li>

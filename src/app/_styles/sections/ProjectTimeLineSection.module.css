@@ -53,6 +53,28 @@
     font-weight: 600;
 }
 
+.type {
+    display: inline-block;
+    margin-top: 12px;
+    color: gray;
+    font-size: 12px;
+    margin-left: 12px;
+}
+
 .summary {
     line-height: 50px;
+}
+
+/* 태블릿 세로 */
+@media screen and (max-width: 768px) {
+    .summary {
+        line-height: 30px;
+    }
+}
+
+/* 모바일 세로 */
+@media screen and (max-width: 480px) {
+    .summary {
+        line-height: 20px;
+    }
 }
