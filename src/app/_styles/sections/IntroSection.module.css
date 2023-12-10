@@ -73,6 +73,10 @@
 
 /* 태블릿 세로 */
 @media screen and (max-width: 768px) {
+    .section {
+        height: 100%
+    }
+
     .infoBox {
         display: flex;
         flex-direction: column;
