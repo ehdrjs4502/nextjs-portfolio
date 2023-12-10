@@ -13,7 +13,6 @@ export default function IntroSection() {
               <strong className={styles.strongBlue}>프론트엔드 개발자</strong> 김동건입니다.
             </h5>
           </div>
-
           <div className={styles.infoBox}>
             <div className={styles.imgBox}>
               <Image
@@ -47,7 +46,6 @@ export default function IntroSection() {
               </div>
             </div>
           </div>
-
           <div className={styles.aboutBox}>
             <h5>About Me</h5>
             <span>
