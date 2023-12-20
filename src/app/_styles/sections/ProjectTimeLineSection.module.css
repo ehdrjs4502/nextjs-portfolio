@@ -12,3 +12,17 @@
     margin-left: 1.5rem;
     border-left: 3px solid #5ba6ff;
 }
+
+/* 태블릿 세로 */
+@media screen and (max-width: 768px) {
+    .box {
+        margin-right: 1.5rem;
+    }
+}
+
+/* 모바일 세로 */
+@media screen and (max-width: 480px) {
+    .box {
+        margin-right: 1.5rem;
+    }
+}
