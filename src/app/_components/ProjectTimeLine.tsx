@@ -27,8 +27,10 @@ export default function ProjectTimeLine() {
           <h2>{project.name}</h2>
           <span className={styles.type}>{project.projectType}</span>
           <ul>
-            {project.summaryList.map((text) => (
-              <li className={styles.summary}>{text}</li>
+            {project.summaryList.map((text, idx) => (
+              <li key={idx} className={styles.summary}>
+                {text}
+              </li>
             ))}
           </ul>
         </div>
