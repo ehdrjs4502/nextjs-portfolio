@@ -1,6 +1,6 @@
 import styles from "@/app/_styles/sections/IntroSection.module.css";
-import Image from "next/image";
 import Link from "next/link";
+import ImgBox from "../_components/ImgBox";
 
 export default function IntroSection() {
   return (
@@ -14,15 +14,7 @@ export default function IntroSection() {
             </h5>
           </div>
           <div className={styles.infoBox}>
-            <div className={styles.imgBox}>
-              <Image
-                src="/images/profile-img.jpg"
-                alt="프로필"
-                width={200}
-                height={250}
-                style={{ borderRadius: "18px" }}
-              />
-            </div>
+            <ImgBox />
             <div className={styles.info}>
               <div>
                 <span>Name</span>
