@@ -77,6 +77,11 @@
         height: 100%
     }
 
+    .titleBox {
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+
     .infoBox {
         display: flex;
         flex-direction: column;
@@ -95,6 +100,11 @@
 
 /* 모바일 세로 */
 @media screen and (max-width: 480px) {
+    .titleBox {
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+
     .infoBox {
         display: flex;
         flex-direction: column;
