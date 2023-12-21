@@ -1,0 +1,36 @@
+.titleBox {
+    text-align: center;
+}
+
+.titleBox h4 {
+    font-size: 38px;
+    margin: 0;
+    margin-top: 14px;
+}
+
+.titleBox h5 {
+    font-size: 32px;
+    margin: 0;
+    margin-top: 14px;
+}
+
+.strongBlue {
+    color: #5ba6ff;
+}
+
+/* 태블릿 세로 */
+@media screen and (max-width: 768px) {
+    .titleBox {
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+
+}
+
+/* 모바일 세로 */
+@media screen and (max-width: 480px) {
+    .titleBox {
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+}

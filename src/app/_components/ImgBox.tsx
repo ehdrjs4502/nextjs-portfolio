@@ -2,6 +2,7 @@
 import styles from "@/app/_styles/components/ImgBox.module.css";
 import Image from "next/image";
 import { useState } from "react";
+import { delay, motion } from "framer-motion";
 
 export default function ImgBox() {
   const [transStyles, setTransStyles] = useState({
@@ -14,6 +15,7 @@ export default function ImgBox() {
     },
   });
 
+  // 마우스 움직임 이벤트
   const handleMouseMove = (e: any) => {
     const x = e.nativeEvent.offsetX;
     const y = e.nativeEvent.offsetY;
@@ -42,15 +44,33 @@ export default function ImgBox() {
       },
     });
   };
+
+  // 나타내기 효과
+  const animation = {
+    hidden: {
+      opacity: 0,
+      y: 30,
+    },
+
+    visible: {
+      opacity: 1,
+      scale: [0, 1.2, 1.0],
+      rotate: [270, 0],
+      y: 0,
+    },
+  };
+
   return (
-    <div
-      className={styles.imgBox}
-      onMouseMove={(e) => handleMouseMove(e)}
-      onMouseOut={handleMouseOut}
-      style={transStyles.transform}
-    >
-      <div className={styles.overlay} style={transStyles.overlay}></div>
-      <Image src="/images/profile-img.jpg" alt="프로필" width={200} height={250} style={{ borderRadius: "18px" }} />
-    </div>
+    <motion.div variants={animation} initial="hidden" animate="visible" transition={{ delay: 0.3 }}>
+      <div
+        className={styles.imgBox}
+        onMouseMove={(e) => handleMouseMove(e)}
+        onMouseOut={handleMouseOut}
+        style={transStyles.transform}
+      >
+        <div className={styles.overlay} style={transStyles.overlay}></div>
+        <Image src="/images/profile-img.jpg" alt="프로필" width={200} height={250} style={{ borderRadius: "18px" }} />
+      </div>
+    </motion.div>
   );
 }

@@ -5,23 +5,60 @@ import { motion } from "framer-motion";
 import styles from "@/app/_styles/components/InfoBox.module.css";
 
 export default function InfoBox() {
+  // 나타내기 효과
+  // 부모
+  const list = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        when: "beforeChildren", // 자식들을 차례대로 나타냄
+        staggerChildren: 0.2, // 나오는 속도
+      },
+    },
+  };
+
+  // 자식
+  const item = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
     <div className={styles.infoBox}>
       <ImgBox />
-      <div className={styles.info}>
-        <motion.div whileHover={{ scale: 1.1 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}>
+      <motion.div className={styles.info} variants={list} initial="hidden" animate="visible">
+        <motion.div
+          variants={item}
+          whileHover={{ scale: 1.1 }}
+          transition={{ type: "spring", stiffness: 300, damping: 10 }}
+        >
           <span>Name</span>
           <strong>김동건</strong>
         </motion.div>
-        <motion.div whileHover={{ scale: 1.1 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}>
+        <motion.div
+          variants={item}
+          whileHover={{ scale: 1.1 }}
+          transition={{ type: "spring", stiffness: 400, damping: 10 }}
+        >
           <span>Phone</span>
           <strong>010-9243-4502</strong>
         </motion.div>
-        <motion.div whileHover={{ scale: 1.1 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}>
+        <motion.div
+          variants={item}
+          whileHover={{ scale: 1.1 }}
+          transition={{ type: "spring", stiffness: 400, damping: 10 }}
+        >
           <span>Mail</span>
           <strong>ehdrjs4502@gmail.com</strong>
         </motion.div>
-        <motion.div whileHover={{ scale: 1.1 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}>
+        <motion.div
+          variants={item}
+          whileHover={{ scale: 1.1 }}
+          transition={{ type: "spring", stiffness: 400, damping: 10 }}
+        >
           <span>Github</span>
           <strong>
             <Link href="https://github.com/ehdrjs4502" target="_blank">
@@ -29,7 +66,7 @@ export default function InfoBox() {
             </Link>
           </strong>
         </motion.div>
-      </div>
+      </motion.div>
     </div>
   );
 }
