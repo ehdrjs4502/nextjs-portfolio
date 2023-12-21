@@ -3,12 +3,23 @@ import { motion } from "framer-motion";
 import styles from "@/app/_styles/components/TitleBox.module.css";
 
 export default function TitleBox() {
+  const animation = {
+    hidden: {
+      opacity: 0,
+      y: "20%",
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+    },
+  };
   return (
     <motion.div
       className={styles.titleBox}
-      initial={{ opacity: 0, y: "10%" }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, x: "100%" }}
+      variants={animation}
+      initial="hidden"
+      animate="visible"
+      transition={{ duration: 0.5 }}
     >
       <h4>안녕하세요!</h4>
       <h5>

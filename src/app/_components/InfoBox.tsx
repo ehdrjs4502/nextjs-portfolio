@@ -16,6 +16,7 @@ export default function InfoBox() {
       transition: {
         when: "beforeChildren", // 자식들을 차례대로 나타냄
         staggerChildren: 0.2, // 나오는 속도
+        delay: 1.2, // 딜레이 시간
       },
     },
   };

@@ -54,14 +54,14 @@ export default function ImgBox() {
 
     visible: {
       opacity: 1,
-      scale: [0, 1.2, 1.0],
-      rotate: [270, 0],
+      scale: [0, 1.2, 1.0], // 스케일 0에서 1.2로 갔다가 1로
+      rotate: [270, 0], // 회전
       y: 0,
     },
   };
 
   return (
-    <motion.div variants={animation} initial="hidden" animate="visible" transition={{ delay: 0.3 }}>
+    <motion.div variants={animation} initial="hidden" animate="visible" transition={{ delay: 0.8 }}>
       <div
         className={styles.imgBox}
         onMouseMove={(e) => handleMouseMove(e)}
