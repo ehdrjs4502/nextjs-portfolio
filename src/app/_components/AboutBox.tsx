@@ -26,7 +26,13 @@ export default function AboutBox() {
   };
 
   return (
-    <motion.div className={styles.aboutBox} variants={list} initial="hidden" animate="visible">
+    <motion.div
+      className={styles.aboutBox}
+      variants={list}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+    >
       <h5>About Me</h5>
       <motion.span variants={item}>
         <strong className={styles.strongBlue}>React.js</strong>, <strong style={{ color: "#3C3C3C" }}>Next.js</strong>를
