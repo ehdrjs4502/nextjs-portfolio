@@ -27,32 +27,6 @@
     margin-top: 14px;
 }
 
-
-.infoBox {
-    margin-top: 50px;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.info {
-    display: grid;
-    grid-gap: 1.5rem;
-    grid-template-rows: repeat(4, 1fr);
-    height: 100%;
-}
-
-.info div {
-    padding: 10px;
-    border: 1px solid #b5b5b5;
-    border-radius: 14px;
-}
-
-.info div span {
-    display: inline-block;
-    width: 70px;
-}
-
 .aboutBox {
     display: flex;
     flex-direction: column;

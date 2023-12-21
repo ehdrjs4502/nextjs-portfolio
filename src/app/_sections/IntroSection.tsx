@@ -1,6 +1,5 @@
 import styles from "@/app/_styles/sections/IntroSection.module.css";
-import Link from "next/link";
-import ImgBox from "../_components/ImgBox";
+import InfoBox from "../_components/InfoBox";
 
 export default function IntroSection() {
   return (
@@ -13,31 +12,7 @@ export default function IntroSection() {
               <strong className={styles.strongBlue}>프론트엔드 개발자</strong> 김동건입니다.
             </h5>
           </div>
-          <div className={styles.infoBox}>
-            <ImgBox />
-            <div className={styles.info}>
-              <div>
-                <span>Name</span>
-                <strong>김동건</strong>
-              </div>
-              <div>
-                <span>Phone</span>
-                <strong>010-9243-4502</strong>
-              </div>
-              <div>
-                <span>Mail</span>
-                <strong>ehdrjs4502@gmail.com</strong>
-              </div>
-              <div>
-                <span>Github</span>
-                <strong>
-                  <Link href="https://github.com/ehdrjs4502" target="_blank">
-                    github.com/ehdrjs4502
-                  </Link>
-                </strong>
-              </div>
-            </div>
-          </div>
+          <InfoBox />
           <div className={styles.aboutBox}>
             <h5>About Me</h5>
             <span>
