@@ -61,7 +61,7 @@ export default function ImgBox() {
   };
 
   return (
-    <motion.div variants={animation} initial="hidden" animate="visible" transition={{ delay: 0.8 }}>
+    <motion.div variants={animation} initial="hidden" animate="visible" transition={{ delay: 0.5 }}>
       <div
         className={styles.imgBox}
         onMouseMove={(e) => handleMouseMove(e)}
