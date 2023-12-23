@@ -1,3 +1,4 @@
+"use client";
 import { skillData } from "../_data/skillData";
 import SkillBox from "@/app/_components/SkillBox";
 import Title from "@/app/_components/Title";

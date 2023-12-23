@@ -44,17 +44,17 @@ export default function SkillBox({ skills }: SkillBoxProps) {
   return (
     <motion.div className={styles.box} variants={list} initial="hidden" whileInView="visible" viewport={{ once: true }}>
       {skills.map((data: any, index: number) => (
-        <motion.div
-          key={index}
-          className={styles.icon}
-          variants={item}
-          whileHover={{ scale: 1.1 }}
-          transition={{ type: "spring", stiffness: 400, damping: 10 }}
-        >
-          <Tooltip title={data.name} arrow placement="top">
+        <Tooltip title={data.name} arrow placement="top">
+          <motion.div
+            key={index}
+            className={styles.icon}
+            variants={item}
+            whileHover={{ scale: 1.1 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+          >
             {data.icon}
-          </Tooltip>
-        </motion.div>
+          </motion.div>
+        </Tooltip>
       ))}
     </motion.div>
   );
