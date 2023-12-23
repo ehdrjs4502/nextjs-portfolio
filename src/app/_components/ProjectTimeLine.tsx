@@ -23,7 +23,14 @@ export default function ProjectTimeLine() {
   return (
     <div>
       {projectTimeLineData.map((project, idx) => (
-        <motion.div key={idx} className={styles.node} variants={list} whileInView="visible" initial="hidden">
+        <motion.div
+          key={idx}
+          className={styles.node}
+          variants={list}
+          whileInView="visible"
+          initial="hidden"
+          viewport={{ once: true }}
+        >
           <div className={styles.date}>
             <span>{project.date}</span>
           </div>
