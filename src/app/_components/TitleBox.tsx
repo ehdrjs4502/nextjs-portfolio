@@ -18,8 +18,9 @@ export default function TitleBox() {
       className={styles.titleBox}
       variants={animation}
       initial="hidden"
-      animate="visible"
+      whileInView="visible"
       transition={{ duration: 0.5 }}
+      viewport={{ once: true }}
     >
       <h4>안녕하세요!</h4>
       <h5>

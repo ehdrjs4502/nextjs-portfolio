@@ -2,8 +2,7 @@
 import styles from "@/app/_styles/components/SkillBox.module.css";
 import { Tooltip } from "@mui/material";
 import { ReactNode } from "react";
-import Reveal from "react-awesome-reveal";
-import { keyframes } from "@emotion/react";
+import { motion } from "framer-motion";
 
 type Skill = {
   name: string;
@@ -20,30 +19,43 @@ type SkillBoxProps = {
   skills: (Skill | Etc)[];
 };
 
-const customAnimation: any = keyframes`
-  from {
-    opacity: 0;
-    transform: translate3d(0, 20%, 0);
-  }
-
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-`;
-
 export default function SkillBox({ skills }: SkillBoxProps) {
+  // 나타내기 효과
+  // 부모
+  const list = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        when: "beforeChildren", // 자식들을 차례대로 나타냄
+        staggerChildren: 0.2, // 나오는 속도
+      },
+    },
+  };
+
+  // 자식
+  const item = {
+    hidden: { opacity: 0, y: 40 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
-    <div className={styles.box}>
-      <Reveal keyframes={customAnimation} cascade damping={0.2}>
-        {skills.map((data: any, index: number) => (
-          <div key={index} className={styles.icon}>
-            <Tooltip title={data.name} arrow placement="top">
-              {data.icon}
-            </Tooltip>
-          </div>
-        ))}
-      </Reveal>
-    </div>
+    <motion.div className={styles.box} variants={list} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+      {skills.map((data: any, index: number) => (
+        <motion.div
+          key={index}
+          className={styles.icon}
+          variants={item}
+          whileHover={{ scale: 1.1 }}
+          transition={{ type: "spring", stiffness: 400, damping: 10 }}
+        >
+          <Tooltip title={data.name} arrow placement="top">
+            {data.icon}
+          </Tooltip>
+        </motion.div>
+      ))}
+    </motion.div>
   );
 }

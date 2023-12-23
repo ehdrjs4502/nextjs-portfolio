@@ -1,26 +1,29 @@
 "use client";
 import styles from "@/app/_styles/components/ProjectTimeLine.module.css";
 import { projectTimeLineData } from "../_data/projectTimeLineData";
-import Reveal from "react-awesome-reveal";
-import { keyframes } from "@emotion/react";
-
-const customAnimation: any = keyframes`
-  from {
-    opacity: 0;
-    transform: translate3d(0, 10%, 0);
-  }
-
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-`;
+import { motion } from "framer-motion";
 
 export default function ProjectTimeLine() {
+  // 나타내기 효과
+  // 부모
+  const list = {
+    hidden: {
+      opacity: 0,
+      y: 60,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 1,
+      },
+    },
+  };
+
   return (
-    <Reveal keyframes={customAnimation} cascade damping={0.5}>
+    <div>
       {projectTimeLineData.map((project, idx) => (
-        <div key={idx} className={styles.node}>
+        <motion.div key={idx} className={styles.node} variants={list} whileInView="visible" initial="hidden">
           <div className={styles.date}>
             <span>{project.date}</span>
           </div>
@@ -33,8 +36,8 @@ export default function ProjectTimeLine() {
               </li>
             ))}
           </ul>
-        </div>
+        </motion.div>
       ))}
-    </Reveal>
+    </div>
   );
 }

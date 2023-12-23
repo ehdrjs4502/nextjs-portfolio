@@ -30,7 +30,13 @@ export default function InfoBox() {
   return (
     <div className={styles.infoBox}>
       <ImgBox />
-      <motion.div className={styles.info} variants={list} initial="hidden" animate="visible">
+      <motion.div
+        className={styles.info}
+        variants={list}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
         <motion.div
           variants={item}
           whileHover={{ scale: 1.1 }}

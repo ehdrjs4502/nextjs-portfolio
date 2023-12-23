@@ -2,7 +2,7 @@
 import styles from "@/app/_styles/components/ImgBox.module.css";
 import Image from "next/image";
 import { useState } from "react";
-import { delay, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function ImgBox() {
   const [transStyles, setTransStyles] = useState({
@@ -61,7 +61,13 @@ export default function ImgBox() {
   };
 
   return (
-    <motion.div variants={animation} initial="hidden" animate="visible" transition={{ delay: 0.5 }}>
+    <motion.div
+      variants={animation}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      transition={{ delay: 0.5 }}
+    >
       <div
         className={styles.imgBox}
         onMouseMove={(e) => handleMouseMove(e)}
