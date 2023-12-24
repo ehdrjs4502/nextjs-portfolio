@@ -8,7 +8,7 @@ import ScrollHint from "../_components/ScrollHint";
 export default function IntroSection() {
   return (
     <>
-      <section className={styles.section}>
+      <section id="intro-section" className={styles.section}>
         <div className={styles.introBox}>
           <TitleBox />
           <InfoBox />

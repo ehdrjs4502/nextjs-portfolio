@@ -7,7 +7,7 @@ import styles from "@/app/_styles/sections/SkillsSection.module.css";
 export default function SkillsSection() {
   return (
     <>
-      <section className={styles.section}>
+      <section id="skill-section" className={styles.section}>
         <div>
           <div className={styles.box}>
             <Title title="Skills" subTitle="사용 가능한 기술 목록입니다." />
