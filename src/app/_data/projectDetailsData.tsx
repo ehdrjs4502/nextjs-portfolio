@@ -45,9 +45,9 @@ export const projectDetailsData: Project[] = [
     content: (
       <span>
         노래방에서 부를 노래 저장 및 공유하는 웹사이트입니다. <strong>React.js</strong>와 <strong>Node.js</strong>를
-        활용하여 개발였습니다. <strong>크롤링</strong>을 통한 노래방 Top 100 데이터 저장 기능,{" "}
+        활용하여 개발였습니다. <strong>크롤링</strong>을 통한 노래방 Top 100 <strong>데이터 저장 기능</strong>,{" "}
         <strong>사용자 검색 및 팔로우 기능</strong>을 통한 노래 공유 기능, <strong>노래 검색, 저장, 삭제 기능</strong>과{" "}
-        <strong>유튜브 API</strong>를 통해 노래 재생 기능을 구현했습니다.
+        <strong>유튜브 API</strong>를 통해 <strong>노래 재생 기능</strong>을 구현했습니다.
       </span>
     ),
     skills: [
