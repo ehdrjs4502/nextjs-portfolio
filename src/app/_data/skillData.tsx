@@ -8,6 +8,7 @@ import NodejsIcon from "../../../public/svgs/nodedotjs-color.svg";
 import NotionIcon from "../../../public/svgs/notion-color.svg";
 import FigmaIcon from "../../../public/svgs/figma-color.svg";
 import GithubIcon from "../../../public/svgs/github-color.svg";
+import TSIcon from "../../../public/svgs/typescript-color.svg";
 
 type Skill = {
   name: string;
@@ -49,6 +50,10 @@ export const skillData: SkillData = {
     {
       name: "Node.js",
       icon: <NodejsIcon />,
+    },
+    {
+      name: "TypeScript",
+      icon: <TSIcon />,
     },
   ],
   etcs: [

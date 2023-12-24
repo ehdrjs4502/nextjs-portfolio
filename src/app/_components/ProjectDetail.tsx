@@ -39,7 +39,9 @@ export default function ProjectDetail({ project }: ProjectProps) {
         <p className={styles.content}>{project.content}</p>
         <div className={styles.skillBox}>
           <h4>사용 기술</h4>
-          {project.skills.join(", ")}
+          {project.skills.map((skill) => (
+            <div className={styles.skill}>{skill}</div>
+          ))}
         </div>
         <div className={styles.linkBox}>
           <h4>링크</h4>

@@ -1,10 +1,12 @@
 import { ReactNode } from "react";
+import NextjsIcon from "../../../public/svgs/nextdotjs-color.svg";
+import TSicon from "../../../public/svgs/typescript-color.svg";
 
 // 데이터 타입 지정
 export type Project = {
   title: string;
   content: ReactNode;
-  skills: string[];
+  skills: ReactNode[];
   links: string[];
   imgs: string[];
 };
@@ -20,7 +22,7 @@ export const projectDetailsData: Project[] = [
         집중했습니다.
       </span>
     ),
-    skills: ["Next.js", "typescript"],
+    skills: [<NextjsIcon />, <TSicon />],
     links: ["https://github.com/ehdrjs4502/assemblog", "https://assemblog.vercel.app/"],
     imgs: ["assemblog1.png", "assemblog2.png", "assemblog3.png", "assemblog4.png"],
   },
