@@ -52,7 +52,7 @@
     .hamburger {
         position: fixed;
         top: 10px;
-        left: 1%;
+        left: 5%;
         z-index: 999;
         display: inline-block;
         cursor: pointer;
