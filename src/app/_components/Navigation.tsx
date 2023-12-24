@@ -23,30 +23,30 @@ const Navigation: React.FC<NavigationProps> = ({ refs }) => {
 
   return (
     <nav className={styles.nav}>
-      <span
+      <button
         className={selectedSection === "intro" ? styles.selected : ""}
         onClick={() => scrollToRef(refs.introRef, "intro")}
       >
         Intro
-      </span>
-      <span
+      </button>
+      <button
         className={selectedSection === "skills" ? styles.selected : ""}
         onClick={() => scrollToRef(refs.skillsRef, "skills")}
       >
         Skills
-      </span>
-      <span
+      </button>
+      <button
         className={selectedSection === "timeline" ? styles.selected : ""}
         onClick={() => scrollToRef(refs.timelineRef, "timeline")}
       >
         Timeline
-      </span>
-      <span
+      </button>
+      <button
         className={selectedSection === "projects" ? styles.selected : ""}
         onClick={() => scrollToRef(refs.projectsRef, "projects")}
       >
         Projects
-      </span>
+      </button>
     </nav>
   );
 };
