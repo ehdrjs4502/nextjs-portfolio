@@ -4,6 +4,7 @@ import Image from "next/image";
 import Slider from "react-slick";
 import GithubLink from "./GithubLink";
 import PageLink from "./PageLink";
+import { Tooltip } from "@mui/material";
 
 // props 타입 부모에 있는 Project 타입으로 설정
 type ProjectProps = {
@@ -35,18 +36,21 @@ export default function ProjectDetail({ project }: ProjectProps) {
         </Slider>
       </div>
       <div className={styles.infoBox}>
-        <h1>{project.title}</h1>
+        <h1 className={styles.title}>{project.title}</h1>
+        <h4 className={styles.subTitle}>{project.subTitle}</h4>
         <p className={styles.content}>{project.content}</p>
         <div className={styles.skillBox}>
           <h4>사용 기술</h4>
           {project.skills.map((skill) => (
-            <div className={styles.skill}>{skill}</div>
+            <Tooltip title={skill.name} arrow placement="top">
+              <div className={styles.skill}>{skill.icon}</div>
+            </Tooltip>
           ))}
         </div>
         <div className={styles.linkBox}>
           <h4>링크</h4>
           <GithubLink url={project.links[0]} />
-          <PageLink url={project.links[1]} />
+          {project.links[1] && <PageLink url={project.links[1]} />}
         </div>
       </div>
 

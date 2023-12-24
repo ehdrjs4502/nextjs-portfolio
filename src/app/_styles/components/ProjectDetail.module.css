@@ -19,6 +19,17 @@
     min-height: 320px;
 }
 
+.title {
+    font-size: 28px;
+}
+
+.subTitle {
+    margin-top: 8px;
+    font-size: 14px;
+    color: rgb(96, 96, 96);
+}
+
+
 .slideImage {
     position: "relative";
     width: "400px";
