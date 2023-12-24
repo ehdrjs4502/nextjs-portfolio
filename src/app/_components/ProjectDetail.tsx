@@ -41,8 +41,8 @@ export default function ProjectDetail({ project }: ProjectProps) {
         <p className={styles.content}>{project.content}</p>
         <div className={styles.skillBox}>
           <h4>사용 기술</h4>
-          {project.skills.map((skill) => (
-            <Tooltip title={skill.name} arrow placement="top">
+          {project.skills.map((skill, index: number) => (
+            <Tooltip key={index} title={skill.name} arrow placement="top">
               <div className={styles.skill}>{skill.icon}</div>
             </Tooltip>
           ))}

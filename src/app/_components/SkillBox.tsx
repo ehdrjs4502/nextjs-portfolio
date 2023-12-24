@@ -44,7 +44,7 @@ export default function SkillBox({ skills }: SkillBoxProps) {
   return (
     <motion.div className={styles.box} variants={list} initial="hidden" whileInView="visible" viewport={{ once: true }}>
       {skills.map((data: any, index: number) => (
-        <Tooltip title={data.name} arrow placement="top">
+        <Tooltip key={index} title={data.name} arrow placement="top">
           <motion.div
             key={index}
             className={styles.icon}
