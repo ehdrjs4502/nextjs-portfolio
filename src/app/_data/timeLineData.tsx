@@ -84,7 +84,7 @@ export const timeLineData: Project = [
   {
     date: "2019. 03 ~",
     title: "인하공업전문대학 진학",
-    subTitle: "컴퓨터정보과 / 학점 3.9 (4.5)",
-    summaryList: [],
+    subTitle: "",
+    summaryList: [<strong>컴퓨터정보과 / 학점 3.9 (4.5)</strong>],
   },
 ];

@@ -35,7 +35,7 @@ export default function ProjectTimeLine() {
             <span>{project.date}</span>
           </div>
           <h2>{project.title}</h2>
-          <span className={styles.type}>{project.subTitle}</span>
+          {project.subTitle && <span className={styles.type}>{project.subTitle}</span>}
           <ul>
             {project.summaryList.map((text, idx) => (
               <li key={idx} className={styles.summary}>
