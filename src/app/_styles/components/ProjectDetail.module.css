@@ -7,6 +7,7 @@
     padding-bottom: 48px;
     padding-top: 48px;
     padding-left: 20px;
+    height: 380px;
 }
 
 .slideImageBox {
@@ -68,6 +69,7 @@
         display: flex;
         flex-direction: column;
         padding-left: 0px;
+        height: 100%;
     }
 
     .slideImageBox {

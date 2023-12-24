@@ -58,7 +58,7 @@ export default function ProjectDetail({ project }: ProjectProps) {
         .slide-img {
           position: relative;
           width: 100%;
-          height: 300px;
+          height: 250px;
         }
 
         @media (max-width: 768px) {
