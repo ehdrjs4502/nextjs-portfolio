@@ -23,3 +23,39 @@
     font-weight: bold;
     /* 선택된 섹션의 폰트를 굵게 설정 */
 }
+
+.hamburger {
+    display: none;
+    /* 초기에는 햄버거 아이콘 숨기기 */
+}
+
+@media screen and (max-width: 768px) {
+    .nav {
+        display: none;
+    }
+
+    .showNav {
+        /* 햄버거 아이콘 클릭 시 보여주는 스타일 */
+        display: flex !important;
+        top: 5px;
+
+    }
+
+    .showBox {
+        position: fixed;
+        width: 100%;
+        background-color: white;
+        height: 40px;
+        z-index: 998;
+    }
+
+    .hamburger {
+        position: fixed;
+        top: 10px;
+        left: 1%;
+        z-index: 999;
+        display: inline-block;
+        cursor: pointer;
+
+    }
+}
