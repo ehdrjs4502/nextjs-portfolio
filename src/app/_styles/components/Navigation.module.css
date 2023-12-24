@@ -1,0 +1,18 @@
+.nav {
+    position: fixed;
+    top: 30px;
+    right: 5%;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 999;
+}
+
+.nav span:hover {
+    cursor: pointer;
+}
+
+.selected {
+    font-weight: bold;
+    /* 선택된 섹션의 폰트를 굵게 설정 */
+}
