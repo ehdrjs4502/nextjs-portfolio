@@ -1,6 +1,6 @@
 "use client";
-import styles from "@/app/_styles/components/ProjectTimeLine.module.css";
-import { projectTimeLineData } from "../_data/projectTimeLineData";
+import styles from "@/app/_styles/components/TimeLine.module.css";
+import { timeLineData } from "../_data/timeLineData";
 import { motion } from "framer-motion";
 
 export default function ProjectTimeLine() {
@@ -22,7 +22,7 @@ export default function ProjectTimeLine() {
 
   return (
     <div>
-      {projectTimeLineData.map((project, idx) => (
+      {timeLineData.map((project, idx) => (
         <motion.div
           key={idx}
           className={styles.node}
@@ -34,8 +34,8 @@ export default function ProjectTimeLine() {
           <div className={styles.date}>
             <span>{project.date}</span>
           </div>
-          <h2>{project.name}</h2>
-          <span className={styles.type}>{project.projectType}</span>
+          <h2>{project.title}</h2>
+          <span className={styles.type}>{project.subTitle}</span>
           <ul>
             {project.summaryList.map((text, idx) => (
               <li key={idx} className={styles.summary}>

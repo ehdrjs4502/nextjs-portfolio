@@ -3,16 +3,22 @@ import { ReactNode } from "react";
 // 데이터 타입 지정
 export type Project = {
   date: string;
-  name: string;
-  projectType: ReactNode;
+  title: string;
+  subTitle: ReactNode;
   summaryList: ReactNode[];
 }[];
 
-export const projectTimeLineData: Project = [
+export const timeLineData: Project = [
+  {
+    date: "2023. 11",
+    title: "정보처리산업기사 취득",
+    subTitle: <span>한국산업인력공단</span>,
+    summaryList: [],
+  },
   {
     date: "2023. 06 ~ 08 (3개월)",
-    name: "assemblog",
-    projectType: <span>팀 프로젝트(2명) / 프론트엔드 담당</span>,
+    title: "assemblog",
+    subTitle: <span>팀 프로젝트(2명) / 프론트엔드 담당</span>,
     summaryList: [
       <span>
         <strong>Next.js</strong>를 활용하여 개발한 2인 공동 블로그 개발 프로젝트
@@ -36,8 +42,8 @@ export const projectTimeLineData: Project = [
   },
   {
     date: "2023. 03 ~ 06 (4개월)",
-    name: "Save Song!",
-    projectType: <span>개인 프로젝트</span>,
+    title: "Save Song!",
+    subTitle: <span>개인 프로젝트</span>,
     summaryList: [
       <span>
         <strong>React.js, TypeScript. Node.js</strong>를 활용한 개인 프로젝트
@@ -58,8 +64,8 @@ export const projectTimeLineData: Project = [
   },
   {
     date: "2022. 09 ~ 12 (4개월)",
-    name: "연도별 자연재해 시각화 웹 사이트",
-    projectType: <span>개인 프로젝트</span>,
+    title: "연도별 자연재해 시각화 웹 사이트",
+    subTitle: <span>개인 프로젝트</span>,
     summaryList: [
       <span>
         <strong>React.js, Node.js</strong>를 활용한 개인 프로젝트
@@ -74,5 +80,11 @@ export const projectTimeLineData: Project = [
         <strong>Python Selenium</strong>을 활용하여 국민재난안전포털 데이터 크롤링 및 DB 저장 구현
       </span>,
     ],
+  },
+  {
+    date: "2019. 03 ~",
+    title: "인하공업전문대학 진학",
+    subTitle: "컴퓨터정보과 / 학점 3.9 (4.5)",
+    summaryList: [],
   },
 ];
