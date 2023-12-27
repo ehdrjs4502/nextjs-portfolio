@@ -52,7 +52,7 @@ export default function InfoBox() {
         >
           <span>Phone</span>
           <strong className={styles.hover}>
-            <Link href="tel:010-92434-4502">010-9243-4502</Link>
+            <Link href="tel:010-9243-4502">010-9243-4502</Link>
           </strong>
         </motion.div>
         <motion.div
