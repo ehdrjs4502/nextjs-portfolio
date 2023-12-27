@@ -1,6 +1,6 @@
 "use client";
 import { skillData } from "../_data/skillData";
-import SkillBox from "@/app/_components/SkillBox";
+import SkillBox from "@/app/_components/skills/SkillBox";
 import Title from "@/app/_components/Title";
 import styles from "@/app/_styles/sections/SkillsSection.module.css";
 

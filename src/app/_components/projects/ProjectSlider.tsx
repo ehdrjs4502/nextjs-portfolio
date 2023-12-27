@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ProjectDetail from "./ProjectDetail";
-import { projectDetailsData } from "../_data/projectDetailsData"; // 데이터 불러오기
+import { projectDetailsData } from "../../_data/projectDetailsData"; // 데이터 불러오기
 
 export default function ProjectSlider() {
   const settings = {

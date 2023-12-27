@@ -1,4 +1,4 @@
-import ProjectSlider from "../_components/ProjectSlider";
+import ProjectSlider from "../_components/projects/ProjectSlider";
 import Title from "../_components/Title";
 import styles from "@/app/_styles/sections/ProjectDetailSection.module.css";
 

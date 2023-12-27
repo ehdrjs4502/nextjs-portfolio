@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import ImgBox from "../_components/ImgBox";
+import ImgBox from "./ImgBox";
 import { motion } from "framer-motion";
 import styles from "@/app/_styles/components/InfoBox.module.css";
 

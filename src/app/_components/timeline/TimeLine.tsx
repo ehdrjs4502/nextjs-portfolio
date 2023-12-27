@@ -1,6 +1,6 @@
 "use client";
 import styles from "@/app/_styles/components/TimeLine.module.css";
-import { timeLineData } from "../_data/timeLineData";
+import { timeLineData } from "../../_data/timeLineData";
 import { motion } from "framer-motion";
 
 export default function ProjectTimeLine() {

@@ -1,9 +1,9 @@
 import styles from "@/app/_styles/components/ProjectDetail.module.css";
-import { Project } from "../_data/projectDetailsData"; // 데이터에서 지정한 타입 불러오기
+import { Project } from "../../_data/projectDetailsData"; // 데이터에서 지정한 타입 불러오기
 import Image from "next/image";
 import Slider from "react-slick";
-import GithubLink from "./GithubLink";
-import PageLink from "./PageLink";
+import GithubLink from "../links/GithubLink";
+import PageLink from "../links/PageLink";
 import { Tooltip } from "@mui/material";
 
 // props 타입 부모에 있는 Project 타입으로 설정
