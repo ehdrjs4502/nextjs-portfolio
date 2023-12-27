@@ -23,6 +23,10 @@
     width: 70px;
 }
 
+.hover:hover {
+    color: rgb(51, 122, 254);
+}
+
 /* 태블릿 세로 */
 @media screen and (max-width: 768px) {
     .infoBox {

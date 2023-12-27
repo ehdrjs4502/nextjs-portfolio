@@ -51,7 +51,9 @@ export default function InfoBox() {
           transition={{ type: "spring", stiffness: 400, damping: 10 }}
         >
           <span>Phone</span>
-          <strong>010-9243-4502</strong>
+          <strong className={styles.hover}>
+            <Link href="tel:010-92434-4502">010-9243-4502</Link>
+          </strong>
         </motion.div>
         <motion.div
           variants={item}
@@ -59,7 +61,9 @@ export default function InfoBox() {
           transition={{ type: "spring", stiffness: 400, damping: 10 }}
         >
           <span>Mail</span>
-          <strong>ehdrjs4502@gmail.com</strong>
+          <strong className={styles.hover}>
+            <Link href="mailto:ehdrjs4502@gmail.com">ehdrjs4502@gmail.com</Link>
+          </strong>
         </motion.div>
         <motion.div
           variants={item}
@@ -67,7 +71,7 @@ export default function InfoBox() {
           transition={{ type: "spring", stiffness: 400, damping: 10 }}
         >
           <span>Github</span>
-          <strong>
+          <strong className={styles.hover}>
             <Link href="https://github.com/ehdrjs4502" target="_blank">
               github.com/ehdrjs4502
             </Link>
