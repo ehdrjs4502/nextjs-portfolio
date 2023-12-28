@@ -25,6 +25,7 @@ export default function ProjectDetail({ project }: ProjectProps) {
   return (
     <div className={styles.box}>
       <div className={styles.slideImageBox}>
+        <span className={styles.hint}>이미지에 마우스를 올릴시 슬라이드가 멈춥니다.</span>
         <Slider {...settings}>
           {project.imgs.map((img, idx: number) => (
             <div key={idx}>
