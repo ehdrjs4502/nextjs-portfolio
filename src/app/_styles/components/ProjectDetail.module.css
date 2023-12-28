@@ -1,7 +1,6 @@
 .box {
     display: flex;
     justify-content: space-around;
-    background-color: rgb(240, 240, 240);
     border: 1px solid gray;
     border-radius: 18px;
     align-items: center;

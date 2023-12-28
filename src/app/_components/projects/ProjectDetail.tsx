@@ -22,6 +22,7 @@ export default function ProjectDetail({ project }: ProjectProps) {
     autoplay: true, // 자동으로 슬라이드 넘기기
     autoplaySpeed: 2000, // 자동으로 넘기는 속도
   };
+
   return (
     <div className={styles.box}>
       <div className={styles.slideImageBox}>
