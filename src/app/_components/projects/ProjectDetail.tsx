@@ -61,6 +61,7 @@ export default function ProjectDetail({ project }: ProjectProps) {
           position: relative;
           width: 100%;
           height: 250px;
+          border: 0.5px solid black;
         }
 
         @media (max-width: 768px) {
