@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "@/app/_styles/components/Navigation.module.css";
+import { useTheme } from "next-themes";
 
 interface NavigationProps {
   refs: {
@@ -11,6 +12,8 @@ interface NavigationProps {
 }
 
 const Navigation: React.FC<NavigationProps> = ({ refs }) => {
+  const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
   const [selectedSection, setSelectedSection] = useState<string | null>(null);
   const [isClick, setIsClick] = useState<boolean>(false);
 
@@ -19,8 +22,6 @@ const Navigation: React.FC<NavigationProps> = ({ refs }) => {
     ref.current?.scrollIntoView({ behavior: "smooth" }); // 해당 ref로 스무스하게 이동
     setSelectedSection(sectionName); // 선택된 섹션 저장
   };
-
-  console.log(isClick);
 
   return (
     <div className={`${styles.box} ${isClick ? styles.showBox : ""}`}>
@@ -54,6 +55,19 @@ const Navigation: React.FC<NavigationProps> = ({ refs }) => {
           onClick={() => scrollToRef(refs.projectsRef, "projects")}
         >
           Projects
+        </button>
+        <button
+          onClick={
+            theme === "light"
+              ? () => {
+                  setTheme("dark");
+                }
+              : () => {
+                  setTheme("light");
+                }
+          }
+        >
+          {theme === "light" ? "다크" : "라이트"}
         </button>
       </nav>
     </div>
