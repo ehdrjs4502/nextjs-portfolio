@@ -27,7 +27,7 @@ export const projectDetailsData: Project[] = [
         <strong>
           로그인<strong> 및 </strong>결제 기능 구현
         </strong>
-        을 통해 보안과 신뢰성을 강화했습니다. 또한 <strong>결제 시스템</strong>은 <strong>스마트 컨트랙트를</strong>
+        을 통해 보안과 신뢰성을 강화했습니다. 또한 <strong>결제 기능</strong>은 <strong>스마트 컨트랙트</strong>를
         기반으로 구축되어 투명하고 조작할 수 없는 거래 과정을 제공하도록 하였습니다.
       </span>
     ),
@@ -101,7 +101,7 @@ export const projectDetailsData: Project[] = [
     imgs: ["savesong1.png", "savesong2.png", "savesong3.png", "savesong4.png", "savesong5.png"],
   },
   {
-    title: "연도별 자연재해 시각화 웹 사이트",
+    title: "연도별 자연재해 시각화 웹",
     subTitle: "개인 프로젝트",
     content: (
       <span>
