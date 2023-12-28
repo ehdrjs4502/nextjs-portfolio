@@ -3,6 +3,8 @@ import NextjsIcon from "../../../public/svgs/nextdotjs-color.svg";
 import TSicon from "../../../public/svgs/typescript-color.svg";
 import ReactjsIcon from "../../../public/svgs/react-color.svg";
 import NodejsIcon from "../../../public/svgs/nodedotjs-color.svg";
+import MySQLIcon from "../../../public/svgs/mysql-color.svg";
+import SeleniumIcon from "../../../public/svgs/selenium-color.svg";
 
 // 데이터 타입 지정
 export type Project = {
@@ -16,8 +18,32 @@ export type Project = {
 
 export const projectDetailsData: Project[] = [
   {
+    title: "mallba",
+    subTitle: "팀프로젝트 (FE: 2, BE: 2) / 프론트엔드 담당",
+    content: (
+      <span>
+        2인 공동 개발 블로그입니다. <strong>Next.js</strong>의 <strong>Page Router</strong>를 활용하여 개발하였습니다.
+        주로 <strong>SSG</strong>와 <strong>SSR</strong>을 통한 <strong>SEO 최적화</strong>, <strong>ISR</strong>을
+        활용한 동적 게시글 업데이트, 그리고 <strong>Next/Image</strong>를 이용한 <strong>이미지 최적화</strong>에
+        집중했습니다.
+      </span>
+    ),
+    skills: [
+      {
+        name: "Next.js",
+        icon: <NextjsIcon />,
+      },
+      {
+        name: "TypeScript",
+        icon: <TSicon />,
+      },
+    ],
+    links: ["https://github.com/ehdrjs4502/assemblog", "https://assemblog.vercel.app/"],
+    imgs: ["assemblog1.png", "assemblog2.png", "assemblog3.png", "assemblog4.png"],
+  },
+  {
     title: "assemblog",
-    subTitle: "팀프로젝트(2명) / 프론트엔드 담당",
+    subTitle: "팀프로젝트 (FE : 1, BE : 1) / 프론트엔드 담당",
     content: (
       <span>
         2인 공동 개발 블로그입니다. <strong>Next.js</strong>의 <strong>Page Router</strong>를 활용하여 개발하였습니다.
@@ -63,8 +89,47 @@ export const projectDetailsData: Project[] = [
         name: "Node.js",
         icon: <NodejsIcon />,
       },
+      {
+        name: "MySQL",
+        icon: <MySQLIcon />,
+      },
+      {
+        name: "Selenium",
+        icon: <SeleniumIcon />,
+      },
     ],
     links: ["https://github.com/ehdrjs4502/save-song"],
     imgs: ["savesong1.png", "savesong2.png", "savesong3.png", "savesong4.png", "savesong5.png"],
+  },
+  {
+    title: "연도별 자연재해 시각화 웹 사이트",
+    subTitle: "개인 프로젝트",
+    content: (
+      <span>
+        <strong>국민재난안전포털</strong>에서 제공하는 자연재해 데이터를 크롤링하여 시각화하는 웹 사이트입니다.{" "}
+        <strong>React.js</strong>와 <strong>Node.js</strong>를 활용하여 개발였습니다. <strong>행정지도 SVG</strong>와{" "}
+        <strong>Apex.js 라이브러리</strong>를 활용하여 자연재해 피해량 시각화를 구현하였습니다.
+      </span>
+    ),
+    skills: [
+      {
+        name: "React.js",
+        icon: <ReactjsIcon />,
+      },
+      {
+        name: "Node.js",
+        icon: <NodejsIcon />,
+      },
+      {
+        name: "MySQL",
+        icon: <MySQLIcon />,
+      },
+      {
+        name: "Selenium",
+        icon: <SeleniumIcon />,
+      },
+    ],
+    links: ["https://github.com/ehdrjs4502/sw-project"],
+    imgs: ["natural-disaster1.png", "natural-disaster2.png"],
   },
 ];
