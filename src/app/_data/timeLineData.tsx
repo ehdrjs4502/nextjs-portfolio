@@ -16,9 +16,37 @@ export const timeLineData: Project = [
     summaryList: [],
   },
   {
+    date: "2023. 09 ~ 12 (4개월)",
+    title: "mallba",
+    subTitle: <span>팀프로젝트 (FE: 2명, BE: 2명) / 프론트엔드 담당</span>,
+    summaryList: [
+      <span>
+        <strong>React.js</strong>를 활용하여 개발한 <strong>Web3</strong> 기반 쇼핑몰
+      </span>,
+      <span>
+        <strong>메타마스크</strong>를 통한 <strong>로그인 및 결제 기능 구현</strong>
+      </span>,
+      <span>
+        <strong>스마트컨트랙트</strong>를 통한 <strong>결제 계약 구현</strong>
+      </span>,
+      <span>
+        사용 편의를 위한 <strong>챗봇 기능 구현</strong>
+      </span>,
+      <span>
+        <strong>상품 카테고리, 상품 검색 기능 구현</strong>
+      </span>,
+      <span>
+        <strong>상품 등록 및 삭제, 장바구니 기능 구현</strong>
+      </span>,
+      <span>
+        <strong>판매 상품 관리, 주문 상품 관리 기능 구현</strong>
+      </span>,
+    ],
+  },
+  {
     date: "2023. 06 ~ 08 (3개월)",
     title: "assemblog",
-    subTitle: <span>팀 프로젝트(2명) / 프론트엔드 담당</span>,
+    subTitle: <span>팀프로젝트 (FE: 1명, BE: 1명) / 프론트엔드 담당</span>,
     summaryList: [
       <span>
         <strong>Next.js</strong>를 활용하여 개발한 2인 공동 블로그 개발 프로젝트
