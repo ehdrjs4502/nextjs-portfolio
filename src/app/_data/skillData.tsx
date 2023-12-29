@@ -9,6 +9,7 @@ import NotionIcon from "../../../public/svgs/notion-color.svg";
 import FigmaIcon from "../../../public/svgs/figma-color.svg";
 import GithubIcon from "../../../public/svgs/github-color.svg";
 import TSIcon from "../../../public/svgs/typescript-color.svg";
+import { useTheme } from "next-themes";
 
 type Skill = {
   name: string;
@@ -25,6 +26,18 @@ export type SkillData = {
   etcs: Etc[];
 };
 
+type DarkModeIconProps = {
+  lightIcon: React.ReactNode;
+  darkIcon: React.ReactNode;
+};
+
+// 테마에 따라서 아이콘 변경
+const DarkModeIcon: React.FC<DarkModeIconProps> = ({ lightIcon, darkIcon }) => {
+  const { theme } = useTheme();
+
+  return theme === "dark" ? darkIcon : lightIcon;
+};
+
 export const skillData: SkillData = {
   skills: [
     {
@@ -37,7 +50,7 @@ export const skillData: SkillData = {
     },
     {
       name: "Next.js",
-      icon: <NextjsIcon />,
+      icon: <DarkModeIcon lightIcon={<NextjsIcon />} darkIcon={<NextjsIcon fill="#ffffff" />} />,
     },
     {
       name: "HTML 5",
@@ -59,7 +72,7 @@ export const skillData: SkillData = {
   etcs: [
     {
       name: "Github",
-      icon: <GithubIcon />,
+      icon: <DarkModeIcon lightIcon={<GithubIcon />} darkIcon={<GithubIcon fill="#ffffff" />} />,
     },
     {
       name: "Figma",
@@ -67,7 +80,7 @@ export const skillData: SkillData = {
     },
     {
       name: "Notion",
-      icon: <NotionIcon />,
+      icon: <DarkModeIcon lightIcon={<NotionIcon />} darkIcon={<NotionIcon fill="#ffffff" />} />,
     },
   ],
 };
