@@ -2,6 +2,20 @@
     display: flex;
     justify-content: space-around;
     border: 1px solid gray;
+    background-color: #f3f3f3;
+    border-radius: 18px;
+    align-items: center;
+    padding-bottom: 48px;
+    padding-top: 48px;
+    padding-left: 20px;
+    height: 380px;
+}
+
+.boxDark {
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid rgb(151, 151, 151);
+    background-color: #222222;
     border-radius: 18px;
     align-items: center;
     padding-bottom: 48px;
@@ -74,6 +88,13 @@
 
 @media screen and (max-width: 768px) {
     .box {
+        display: flex;
+        flex-direction: column;
+        padding-left: 0px;
+        height: 100%;
+    }
+
+    .boxDark {
         display: flex;
         flex-direction: column;
         padding-left: 0px;

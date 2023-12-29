@@ -5,6 +5,8 @@ import Slider from "react-slick";
 import GithubLink from "../links/GithubLink";
 import PageLink from "../links/PageLink";
 import { Tooltip } from "@mui/material";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 // props 타입 부모에 있는 Project 타입으로 설정
 type ProjectProps = {
@@ -12,6 +14,16 @@ type ProjectProps = {
 };
 
 export default function ProjectDetail({ project }: ProjectProps) {
+  const [mounted, setMounted] = useState(false);
+  const { theme } = useTheme();
+
+  // ssr에서 말고 클라이언트 측에서 렌더링 되고 나서 스타일 렌더링하도록 설정
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
+
   const settings = {
     dots: true, // 캐러셀 밑에 ... 을 표시할지
     infinite: true, // 슬라이드가 끝까지 가면 다시 처음으로 반복
@@ -24,7 +36,7 @@ export default function ProjectDetail({ project }: ProjectProps) {
   };
 
   return (
-    <div className={styles.box}>
+    <div className={theme === "dark" ? styles.boxDark : styles.box}>
       <div className={styles.slideImageBox}>
         <span className={styles.hint}>이미지에 마우스를 올릴시 슬라이드가 멈춥니다.</span>
         <Slider {...settings}>
