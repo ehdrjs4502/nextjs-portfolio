@@ -12,9 +12,9 @@ interface NavigationProps {
 }
 
 const Navigation: React.FC<NavigationProps> = ({ refs }) => {
-  const { theme, setTheme } = useTheme();
-  const [selectedSection, setSelectedSection] = useState<string | null>(null);
-  const [isClick, setIsClick] = useState<boolean>(false);
+  const { theme, setTheme } = useTheme(); // 테마 설정
+  const [selectedSection, setSelectedSection] = useState<string | null>(null); // nav 선택한 섹션
+  const [isClick, setIsClick] = useState<boolean>(false); // 햄버거 클릭했는지
 
   // 해당 ref로 이동하는 함수
   const scrollToRef = (ref: React.RefObject<HTMLDivElement>, sectionName: string) => {
@@ -22,12 +22,15 @@ const Navigation: React.FC<NavigationProps> = ({ refs }) => {
     setSelectedSection(sectionName); // 선택된 섹션 저장
   };
 
+  // 모바일 환경에서 햄버거 버튼 누를 시 테마에 맞게 스타일 지정 함수
+  const changeBoxStyle = () => {
+    if (isClick && theme === "light") return styles.showBox;
+    if (isClick && theme === "dark") return styles.showBoxDark;
+    return "";
+  };
+
   return (
-    <div
-      className={`${styles.box} ${
-        isClick && theme === "light" ? styles.showBox : isClick && theme === "dark" ? styles.showBoxDark : ""
-      }`}
-    >
+    <div className={`${styles.box} ${changeBoxStyle()}`}>
       {/* 햄버거 아이콘 */}
       <div className={styles.hamburger} onClick={() => setIsClick(!isClick)}>
         {isClick ? "✕" : "☰"}
