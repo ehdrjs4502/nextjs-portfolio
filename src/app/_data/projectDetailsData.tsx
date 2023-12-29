@@ -1,10 +1,11 @@
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import NextjsIcon from "../../../public/svgs/nextdotjs-color.svg";
 import TSicon from "../../../public/svgs/typescript-color.svg";
 import ReactjsIcon from "../../../public/svgs/react-color.svg";
 import NodejsIcon from "../../../public/svgs/nodedotjs-color.svg";
 import MySQLIcon from "../../../public/svgs/mysql-color.svg";
 import SeleniumIcon from "../../../public/svgs/selenium-color.svg";
+import { useTheme } from "next-themes";
 
 // 데이터 타입 지정
 export type Project = {
@@ -14,6 +15,28 @@ export type Project = {
   skills: { name: string; icon: ReactNode }[];
   links: string[];
   imgs: string[];
+};
+
+type DarkModeIconProps = {
+  lightIcon: React.ReactNode;
+  darkIcon: React.ReactNode;
+};
+
+// 테마에 따라서 아이콘 변경
+const DarkModeIcon: React.FC<DarkModeIconProps> = ({ lightIcon, darkIcon }) => {
+  const [mounted, setMounted] = useState(false);
+  const { theme } = useTheme();
+
+  // ssr에서 말고 클라이언트 측에서 렌더링 되고 나서 아이콘을 렌더링하도록 설정
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
+
+  console.log("Current Theme:", theme);
+
+  return theme === "dark" ? darkIcon : lightIcon;
 };
 
 export const projectDetailsData: Project[] = [
@@ -54,7 +77,7 @@ export const projectDetailsData: Project[] = [
     skills: [
       {
         name: "Next.js",
-        icon: <NextjsIcon />,
+        icon: <DarkModeIcon lightIcon={<NextjsIcon />} darkIcon={<NextjsIcon fill="#ffffff" />} />,
       },
       {
         name: "TypeScript",
