@@ -1,0 +1,35 @@
+.arrowBox {
+    width: 1040px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: -40px;
+    margin-top: -250px;
+}
+
+.arrowBox:hover {
+    cursor: pointer;
+}
+
+/* 태블릿 세로 */
+@media screen and (max-width: 768px) {
+    .arrowBox {
+        width: 660px;
+        display: flex;
+        justify-content: space-between;
+        margin-left: -30px;
+        margin-top: -450px;
+    }
+
+}
+
+/* 모바일 세로 */
+@media screen and (max-width: 480px) {
+    .arrowBox {
+        width: 400px;
+        display: flex;
+        justify-content: space-between;
+        margin-left: -30px;
+        margin-top: -450px;
+    }
+
+}
