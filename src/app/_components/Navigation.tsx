@@ -12,7 +12,6 @@ interface NavigationProps {
 }
 
 const Navigation: React.FC<NavigationProps> = ({ refs }) => {
-  const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
   const [selectedSection, setSelectedSection] = useState<string | null>(null);
   const [isClick, setIsClick] = useState<boolean>(false);
@@ -24,7 +23,11 @@ const Navigation: React.FC<NavigationProps> = ({ refs }) => {
   };
 
   return (
-    <div className={`${styles.box} ${isClick ? styles.showBox : ""}`}>
+    <div
+      className={`${styles.box} ${
+        isClick && theme === "light" ? styles.showBox : isClick && theme === "dark" ? styles.showBoxDark : ""
+      }`}
+    >
       {/* 햄버거 아이콘 */}
       <div className={styles.hamburger} onClick={() => setIsClick(!isClick)}>
         {isClick ? "✕" : "☰"}

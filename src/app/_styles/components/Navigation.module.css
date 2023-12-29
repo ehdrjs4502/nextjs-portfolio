@@ -44,7 +44,15 @@
     .showBox {
         position: fixed;
         width: 100%;
-        background-color: '';
+        background-color: white;
+        height: 40px;
+        z-index: 998;
+    }
+
+    .showBoxDark {
+        position: fixed;
+        width: 100%;
+        background-color: rgb(18, 18, 18);
         height: 40px;
         z-index: 998;
     }
