@@ -1,4 +1,4 @@
-import styles from "@/app/_styles/components/ProjectDetail.module.css";
+import styles from "@/app/_styles/components/projects/ProjectDetail.module.css";
 import { Project } from "../../_data/projectDetailsData"; // 데이터에서 지정한 타입 불러오기
 import Image from "next/image";
 import Slider from "react-slick";
@@ -42,7 +42,7 @@ export default function ProjectDetail({ project }: ProjectProps) {
         <Slider {...settings}>
           {project.imgs.map((img, idx: number) => (
             <div key={idx}>
-              <div className="slide-img">
+              <div className={styles.slideImage}>
                 <Image key={idx} src={`/images/${img}`} sizes="(max-width: 768px) 100vw" fill alt="이미지" />
               </div>
             </div>
@@ -67,21 +67,6 @@ export default function ProjectDetail({ project }: ProjectProps) {
           {project.links[1] && <PageLink url={project.links[1]} />}
         </div>
       </div>
-
-      <style jsx>{`
-        .slide-img {
-          position: relative;
-          width: 100%;
-          height: 250px;
-          border: 0.5px solid black;
-        }
-
-        @media (max-width: 768px) {
-          .slide-img {
-            height: 160px;
-          }
-        }
-      `}</style>
     </div>
   );
 }

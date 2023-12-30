@@ -2,7 +2,7 @@
 import Link from "next/link";
 import ImgBox from "./ImgBox";
 import { motion } from "framer-motion";
-import styles from "@/app/_styles/components/InfoBox.module.css";
+import styles from "@/app/_styles/components/intro/InfoBox.module.css";
 
 export default function InfoBox() {
   // 나타내기 효과

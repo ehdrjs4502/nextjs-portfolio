@@ -29,6 +29,13 @@
     text-align: center;
 }
 
+.slideImage {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    border: 0.5px solid black;
+}
+
 .hint {
     display: inline-block;
     font-weight: bold;
@@ -105,6 +112,10 @@
         width: 80%;
     }
 
+    .slideImage {
+        height: 240px;
+    }
+
 
     .infoBox {
         width: 80%;
@@ -112,4 +123,20 @@
         margin-top: 48px;
         margin-bottom: 24px;
     }
+}
+
+/* 모바일 세로 */
+@media screen and (max-width: 480px) {
+    .arrowBox {
+        width: 400px;
+        display: flex;
+        justify-content: space-between;
+        margin-left: -30px;
+        margin-top: -450px;
+    }
+
+    .slideImage {
+        height: 160px;
+    }
+
 }

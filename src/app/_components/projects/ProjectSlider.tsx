@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import ProjectDetail from "./ProjectDetail";
 import { projectDetailsData } from "../../_data/projectDetailsData"; // 데이터 불러오기
 import { useCallback, useRef } from "react";
-import styles from "@/app/_styles/components/ProjectSlider.module.css";
+import styles from "@/app/_styles/components/projects/ProjectSlider.module.css";
 import { ArrowForwardIos, ArrowBackIosNew } from "@mui/icons-material";
 
 export default function ProjectSlider() {
