@@ -1,5 +1,5 @@
 "use client";
-import styles from "@/app/_styles/components/SkillBox.module.css";
+import styles from "@/app/_styles/components/skills/SkillBox.module.css";
 import { Tooltip } from "@mui/material";
 import { ReactNode } from "react";
 import { motion } from "framer-motion";
