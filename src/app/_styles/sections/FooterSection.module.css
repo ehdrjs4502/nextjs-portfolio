@@ -1,0 +1,64 @@
+.footer {
+    height: 200px;
+    background-color: black;
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+    padding-top: 32px;
+    margin-top: 40px;
+    padding-right: 30px;
+}
+
+.title {
+    text-align: center;
+    font-size: 18px;
+}
+
+.libraryBox {
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    height: 120px;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.libraryBox span:hover {
+    color: gray;
+}
+
+.skillBox {
+    margin-top: 18px;
+    text-align: center;
+}
+
+.skillBox svg:hover {
+    fill: gray;
+}
+
+.followBox {
+    margin-top: 18px;
+    display: flex;
+    width: 120px;
+    justify-content: space-between;
+}
+
+.followBox svg:hover {
+    fill: gray;
+}
+
+/* 태블릿 세로 */
+@media screen and (max-width: 768px) {
+    .footer {
+        margin-top: 360px;
+        padding-right: 0;
+    }
+}
+
+/* 모바일 세로 */
+@media screen and (max-width: 480px) {
+    .footer {
+        margin-top: 360px;
+        padding-right: 0;
+    }
+}

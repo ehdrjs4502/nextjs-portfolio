@@ -5,6 +5,7 @@ import TimeLineSection from "./_sections/TimeLineSection";
 import SkillsSection from "./_sections/SkillsSection";
 import { useRef } from "react";
 import Navigation from "./_components/Navigation";
+import FooterSection from "./_sections/FooterSection";
 
 export default function Home() {
   const introRef = useRef<HTMLDivElement>(null);
@@ -27,6 +28,7 @@ export default function Home() {
       <div ref={projectsRef}>
         <ProjectDetailSection />
       </div>
+      <FooterSection />
     </>
   );
 }
