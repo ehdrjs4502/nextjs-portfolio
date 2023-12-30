@@ -3,7 +3,6 @@ import HtmlIcon from "../../../public/svgs/html5-color.svg";
 import CssIcon from "../../../public/svgs/css3-color.svg";
 import JsIcon from "../../../public/svgs/javascript-color.svg";
 import NextjsIcon from "../../../public/svgs/nextdotjs-color.svg";
-import NextjsDarkIcon from "../../../public/svgs/nextdotjs-dark.svg";
 import ReactjsIcon from "../../../public/svgs/react-color.svg";
 import NodejsIcon from "../../../public/svgs/nodedotjs-color.svg";
 import NotionIcon from "../../../public/svgs/notion-color.svg";
