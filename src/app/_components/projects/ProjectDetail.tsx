@@ -6,7 +6,8 @@ import GithubLink from "../links/GithubLink";
 import PageLink from "../links/PageLink";
 import { Tooltip } from "@mui/material";
 import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { ArrowForwardIos, ArrowBackIosNew } from "@mui/icons-material";
 
 // props 타입 부모에 있는 Project 타입으로 설정
 type ProjectProps = {
@@ -16,6 +17,10 @@ type ProjectProps = {
 export default function ProjectDetail({ project }: ProjectProps) {
   const [mounted, setMounted] = useState(false);
   const { theme } = useTheme();
+  const slickRef = useRef<Slider>(null); // 슬라이더에 쓸거니 <Slider> 타입
+
+  const previous = useCallback(() => slickRef.current?.slickPrev(), []);
+  const next = useCallback(() => slickRef.current?.slickNext(), []);
 
   // ssr에서 말고 클라이언트 측에서 렌더링 되고 나서 스타일 렌더링하도록 설정
   useEffect(() => {
@@ -33,13 +38,14 @@ export default function ProjectDetail({ project }: ProjectProps) {
     draggable: false, // 마우스 드래그로 슬라이드 전환 비활성화
     autoplay: true, // 자동으로 슬라이드 넘기기
     autoplaySpeed: 2000, // 자동으로 넘기는 속도
+    arrows: false,
   };
 
   return (
     <div className={theme === "dark" ? styles.boxDark : styles.box}>
       <div className={styles.slideImageBox}>
         <span className={styles.hint}>이미지에 마우스를 올릴시 슬라이드가 멈춥니다.</span>
-        <Slider {...settings}>
+        <Slider {...settings} ref={slickRef}>
           {project.imgs.map((img, idx: number) => (
             <div key={idx}>
               <div className={styles.slideImage}>
@@ -48,6 +54,14 @@ export default function ProjectDetail({ project }: ProjectProps) {
             </div>
           ))}
         </Slider>
+        <div className={styles.arrowBox}>
+          <div onClick={previous}>
+            <ArrowBackIosNew />
+          </div>
+          <div onClick={next}>
+            <ArrowForwardIos />
+          </div>
+        </div>
       </div>
       <div className={styles.infoBox}>
         <h1 className={styles.title}>{project.title}</h1>
