@@ -61,4 +61,17 @@
         margin-top: 360px;
         padding-right: 0;
     }
+
+    .title {
+        font-size: 14px;
+    }
+
+    .libraryBox {
+        font-size: 12px;
+    }
+
+    .followBox {
+        width: 90px;
+    }
+
 }
