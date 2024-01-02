@@ -86,7 +86,7 @@ export const timeLineData: Project = [
         <strong>Youtube API</strong>를 통해 노래 재생 기능 구현
       </span>,
       <span>
-        <strong>Python Selenium</strong>을 활용하여 tj 노래방 인기차트 크롤링 및 데이터베이스에 저장 기능 구현
+        <strong>Python Selenium</strong>을 활용하여 노래방 인기차트 크롤링 및 데이터 저장 기능 구현
       </span>,
     ],
   },
