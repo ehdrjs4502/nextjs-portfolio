@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "@/app/_styles/components/Navigation.module.css";
 import { useTheme } from "next-themes";
+import { LightMode, DarkMode } from "@mui/icons-material";
 
 interface NavigationProps {
   refs: {
@@ -81,7 +82,7 @@ const Navigation: React.FC<NavigationProps> = ({ refs }) => {
                 }
           }
         >
-          {theme === "light" ? "다크" : "라이트"}
+          {theme === "light" ? <DarkMode /> : <LightMode />}
         </button>
       </nav>
     </div>

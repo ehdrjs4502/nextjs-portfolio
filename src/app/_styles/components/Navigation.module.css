@@ -1,7 +1,7 @@
 .nav {
     position: fixed;
     top: 20px;
-    right: 5%;
+    right: 2%;
     width: 340px;
     display: flex;
     justify-content: space-between;
@@ -37,7 +37,8 @@
     .showNav {
         /* 햄버거 아이콘 클릭 시 보여주는 스타일 */
         display: flex !important;
-        top: 5px;
+        justify-content: flex-end;
+        top: -2px;
 
     }
 
@@ -61,7 +62,7 @@
         position: fixed;
         top: 10px;
         left: 5%;
-        z-index: 999;
+        z-index: 1000;
         display: inline-block;
         cursor: pointer;
 
