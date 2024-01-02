@@ -140,7 +140,7 @@
 /* 모바일 세로 */
 @media screen and (max-width: 480px) {
     .arrowBox {
-        width: 326px;
+        width: 310px;
         margin-top: -90px;
     }
 

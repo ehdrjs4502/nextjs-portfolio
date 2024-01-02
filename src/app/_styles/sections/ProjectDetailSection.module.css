@@ -25,7 +25,7 @@
 /* 모바일 세로 */
 @media screen and (max-width: 480px) {
     .box {
-        width: 340px;
+        width: 320px;
     }
 
     .section {
