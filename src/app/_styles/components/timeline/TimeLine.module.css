@@ -55,6 +55,7 @@
 
 .summary {
     line-height: 50px;
+    word-break: keep-all;
 }
 
 /* 태블릿 세로 */
