@@ -6,6 +6,7 @@ import ProjectDetail from "./ProjectDetail";
 import { projectDetailsData } from "../../_data/projectDetailsData"; // 데이터 불러오기
 import { useCallback, useRef } from "react";
 import styles from "@/app/_styles/components/projects/ProjectSlider.module.css";
+import "@/app/_styles/components/projects/slick.css";
 import { ArrowForwardIos, ArrowBackIosNew } from "@mui/icons-material";
 
 export default function ProjectSlider() {
@@ -21,6 +22,7 @@ export default function ProjectSlider() {
     slidesToShow: 1, // 한 번에 보여줄 슬라이드 개수
     slidesToScroll: 1, // 한 번에 넘어가는 슬라이드 개수
     arrows: false,
+    dotsClass: "dots_custom", // 커스텀 도트 스타일
   };
 
   return (

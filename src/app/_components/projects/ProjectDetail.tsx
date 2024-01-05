@@ -8,6 +8,7 @@ import { Tooltip } from "@mui/material";
 import { useTheme } from "next-themes";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ArrowForwardIos, ArrowBackIosNew } from "@mui/icons-material";
+import "@/app/_styles/components/projects/slick.css";
 
 // props 타입 부모에 있는 Project 타입으로 설정
 type ProjectProps = {
@@ -39,6 +40,7 @@ export default function ProjectDetail({ project }: ProjectProps) {
     autoplay: true, // 자동으로 슬라이드 넘기기
     autoplaySpeed: 2000, // 자동으로 넘기는 속도
     arrows: false,
+    dotsClass: "dots_custom", // 커스텀 도트 스타일
   };
 
   return (

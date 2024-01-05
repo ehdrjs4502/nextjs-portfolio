@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     margin-left: -40px;
-    margin-top: -250px;
+    margin-top: -290px;
 }
 
 .arrowBox:hover {
@@ -23,7 +23,7 @@
 @media screen and (max-width: 480px) {
     .arrowBox {
         width: 370px;
-        margin-top: -440px;
+        margin-top: -460px;
         margin-left: -25px;
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
     }
