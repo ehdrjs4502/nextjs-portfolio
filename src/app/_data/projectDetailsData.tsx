@@ -34,8 +34,6 @@ const DarkModeIcon: React.FC<DarkModeIconProps> = ({ lightIcon, darkIcon }) => {
 
   if (!mounted) return null;
 
-  console.log("Current Theme:", theme);
-
   return theme === "dark" ? darkIcon : lightIcon;
 };
 
