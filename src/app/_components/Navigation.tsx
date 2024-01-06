@@ -36,7 +36,7 @@ const Navigation: React.FC<NavigationProps> = ({ refs }) => {
     setMounted(true);
   }, []);
 
-  // if (!mounted) return null;
+  if (!mounted) return null;
 
   return (
     <div className={`${styles.box} ${changeBoxStyle()}`}>
