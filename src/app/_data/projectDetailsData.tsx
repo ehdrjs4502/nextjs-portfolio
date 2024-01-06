@@ -1,10 +1,10 @@
 import { ReactNode, useEffect, useState } from "react";
-import NextjsIcon from "../../../public/svgs/nextdotjs-color.svg";
-import TSicon from "../../../public/svgs/typescript-color.svg";
-import ReactjsIcon from "../../../public/svgs/react-color.svg";
-import NodejsIcon from "../../../public/svgs/nodedotjs-color.svg";
-import MySQLIcon from "../../../public/svgs/mysql-color.svg";
-import SeleniumIcon from "../../../public/svgs/selenium-color.svg";
+import NextjsIcon from "@/svgs/nextdotjs-color.svg";
+import TSicon from "@/svgs/typescript-color.svg";
+import ReactjsIcon from "@/svgs/react-color.svg";
+import NodejsIcon from "@/svgs/nodedotjs-color.svg";
+import MySQLIcon from "@/svgs/mysql-color.svg";
+import SeleniumIcon from "@/svgs/selenium-color.svg";
 import { useTheme } from "next-themes";
 
 // 데이터 타입 지정

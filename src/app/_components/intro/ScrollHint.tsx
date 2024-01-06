@@ -1,4 +1,4 @@
-import styles from "@/app/_styles/components/intro/ScrollHint.module.css";
+import styles from "@/styles/components/intro/ScrollHint.module.css";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 

@@ -1,4 +1,4 @@
-import styles from "@/app/_styles/components/Title.module.css";
+import styles from "@/styles/components/Title.module.css";
 
 interface TitleProps {
   title: string;

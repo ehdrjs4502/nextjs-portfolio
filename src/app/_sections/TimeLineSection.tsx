@@ -1,6 +1,6 @@
-import Title from "@/app/_components/Title";
-import styles from "@/app/_styles/sections/TimeLineSection.module.css";
-import ProjectTimeLine from "../_components/timeline/TimeLine";
+import Title from "@/components/Title";
+import styles from "@/styles/sections/TimeLineSection.module.css";
+import ProjectTimeLine from "@/components/timeline/TimeLine";
 
 export default function TimeLineSection() {
   return (

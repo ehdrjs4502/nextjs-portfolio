@@ -1,5 +1,5 @@
 "use client";
-import styles from "@/app/_styles/components/intro/ImgBox.module.css";
+import styles from "@/styles/components/intro/ImgBox.module.css";
 import Image from "next/image";
 import { useState } from "react";
 import { motion } from "framer-motion";

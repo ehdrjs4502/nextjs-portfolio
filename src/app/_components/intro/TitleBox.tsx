@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import styles from "@/app/_styles/components/intro/TitleBox.module.css";
+import styles from "@/styles/components/intro/TitleBox.module.css";
 
 export default function TitleBox() {
   const animation = {

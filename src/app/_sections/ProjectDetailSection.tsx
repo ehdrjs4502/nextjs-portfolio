@@ -1,6 +1,6 @@
-import ProjectSlider from "../_components/projects/ProjectSlider";
-import Title from "../_components/Title";
-import styles from "@/app/_styles/sections/ProjectDetailSection.module.css";
+import ProjectSlider from "@/components/projects/ProjectSlider";
+import Title from "@/components/Title";
+import styles from "@/styles/sections/ProjectDetailSection.module.css";
 
 export default function ProjectDetailSection() {
   return (

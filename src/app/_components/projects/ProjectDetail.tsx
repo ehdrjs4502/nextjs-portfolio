@@ -1,14 +1,14 @@
-import styles from "@/app/_styles/components/projects/ProjectDetail.module.css";
+import styles from "@/styles/components/projects/ProjectDetail.module.css";
 import { Project } from "../../_data/projectDetailsData"; // 데이터에서 지정한 타입 불러오기
 import Image from "next/image";
 import Slider from "react-slick";
-import GithubLink from "../links/GithubLink";
-import PageLink from "../links/PageLink";
+import GithubLink from "@/components/links/GithubLink";
+import PageLink from "@/components/links/PageLink";
 import { Tooltip } from "@mui/material";
 import { useTheme } from "next-themes";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ArrowForwardIos, ArrowBackIosNew } from "@mui/icons-material";
-import "@/app/_styles/components/projects/slick.css";
+import "@/styles/components/projects/slick.css";
 
 // props 타입 부모에 있는 Project 타입으로 설정
 type ProjectProps = {

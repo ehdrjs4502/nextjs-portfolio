@@ -1,6 +1,6 @@
 "use client";
 import styles from "@/app/_styles/components/timeline/TimeLine.module.css";
-import { timeLineData } from "../../_data/timeLineData";
+import { timeLineData } from "@/data/timeLineData";
 import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";

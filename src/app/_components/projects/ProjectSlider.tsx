@@ -3,10 +3,10 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ProjectDetail from "./ProjectDetail";
-import { projectDetailsData } from "../../_data/projectDetailsData"; // 데이터 불러오기
+import { projectDetailsData } from "@/data/projectDetailsData"; // 데이터 불러오기
 import { useCallback, useRef } from "react";
-import styles from "@/app/_styles/components/projects/ProjectSlider.module.css";
-import "@/app/_styles/components/projects/slick.css";
+import styles from "@/styles/components/projects/ProjectSlider.module.css";
+import "@/styles/components/projects/slick.css";
 import { ArrowForwardIos, ArrowBackIosNew } from "@mui/icons-material";
 
 export default function ProjectSlider() {

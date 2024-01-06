@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import styles from "@/app/_styles/components/intro/AboutBox.module.css";
+import styles from "@/styles/components/intro/AboutBox.module.css";
 
 export default function AboutBox() {
   // 나타내기 효과

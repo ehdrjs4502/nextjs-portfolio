@@ -1,11 +1,11 @@
 "use client";
-import IntroSection from "./_sections/IntroSection";
-import ProjectDetailSection from "./_sections/ProjectDetailSection";
-import TimeLineSection from "./_sections/TimeLineSection";
-import SkillsSection from "./_sections/SkillsSection";
+import IntroSection from "@/sections/IntroSection";
+import ProjectDetailSection from "@/sections/ProjectDetailSection";
+import TimeLineSection from "@/sections/TimeLineSection";
+import SkillsSection from "@/sections/SkillsSection";
 import { useRef } from "react";
-import Navigation from "./_components/Navigation";
-import FooterSection from "./_sections/FooterSection";
+import Navigation from "@/components/Navigation";
+import FooterSection from "@/sections/FooterSection";
 
 export default function Home() {
   const introRef = useRef<HTMLDivElement>(null);

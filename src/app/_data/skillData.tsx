@@ -1,14 +1,14 @@
 import { ReactNode, useEffect, useState } from "react";
-import HtmlIcon from "../../../public/svgs/html5-color.svg";
-import CssIcon from "../../../public/svgs/css3-color.svg";
-import JsIcon from "../../../public/svgs/javascript-color.svg";
-import NextjsIcon from "../../../public/svgs/nextdotjs-color.svg";
-import ReactjsIcon from "../../../public/svgs/react-color.svg";
-import NodejsIcon from "../../../public/svgs/nodedotjs-color.svg";
-import NotionIcon from "../../../public/svgs/notion-color.svg";
-import FigmaIcon from "../../../public/svgs/figma-color.svg";
-import GithubIcon from "../../../public/svgs/github-color.svg";
-import TSIcon from "../../../public/svgs/typescript-color.svg";
+import HtmlIcon from "@/svgs/html5-color.svg";
+import CssIcon from "@/svgs/css3-color.svg";
+import JsIcon from "@/svgs/javascript-color.svg";
+import NextjsIcon from "@/svgs/nextdotjs-color.svg";
+import ReactjsIcon from "@/svgs/react-color.svg";
+import NodejsIcon from "@/svgs/nodedotjs-color.svg";
+import NotionIcon from "@/svgs/notion-color.svg";
+import FigmaIcon from "@/svgs/figma-color.svg";
+import GithubIcon from "@/svgs/github-color.svg";
+import TSIcon from "@/svgs/typescript-color.svg";
 import { useTheme } from "next-themes";
 
 type Skill = {

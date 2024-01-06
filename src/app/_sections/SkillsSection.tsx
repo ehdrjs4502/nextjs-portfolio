@@ -1,8 +1,8 @@
 "use client";
-import { skillData } from "../_data/skillData";
-import SkillBox from "@/app/_components/skills/SkillBox";
-import Title from "@/app/_components/Title";
-import styles from "@/app/_styles/sections/SkillsSection.module.css";
+import { skillData } from "@/data/skillData";
+import SkillBox from "@/components/skills/SkillBox";
+import Title from "@/components/Title";
+import styles from "@/styles/sections/SkillsSection.module.css";
 
 export default function SkillsSection() {
   return (

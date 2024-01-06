@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import styles from "@/app/_styles/components/Navigation.module.css";
+import styles from "@/styles/components/Navigation.module.css";
 import { useTheme } from "next-themes";
 import { LightMode, DarkMode } from "@mui/icons-material";
 
