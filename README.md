@@ -17,7 +17,7 @@ Next.js + TypeScript 개인 포트폴리오 사이트
 
 
 ## ⏱개발 기간
-2023. 06 ~ 2023. 08 (3개월)
+2023. 12 ~ 2024. 01 (2개월)
 
 ## 🛠사용 기술
 ![Next.js](https://img.shields.io/badge/next.js-%23323330.svg?style=for-the-badge&logo=next.js&logoColor=#000000)
