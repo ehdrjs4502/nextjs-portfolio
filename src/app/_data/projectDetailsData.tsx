@@ -1,4 +1,4 @@
-import { ReactNode, useEffect, useState } from "react";
+import { ReactNode } from "react";
 import NextjsIcon from "@/svgs/nextdotjs-color.svg";
 import TSicon from "@/svgs/typescript-color.svg";
 import ReactjsIcon from "@/svgs/react-color.svg";
@@ -6,6 +6,7 @@ import NodejsIcon from "@/svgs/nodedotjs-color.svg";
 import MySQLIcon from "@/svgs/mysql-color.svg";
 import SeleniumIcon from "@/svgs/selenium-color.svg";
 import { useTheme } from "next-themes";
+import useMount from "../hooks/useMount";
 
 // 데이터 타입 지정
 export type Project = {
@@ -24,13 +25,8 @@ type DarkModeIconProps = {
 
 // 테마에 따라서 아이콘 변경
 const DarkModeIcon: React.FC<DarkModeIconProps> = ({ lightIcon, darkIcon }) => {
-  const [mounted, setMounted] = useState(false);
+  const mounted = useMount();
   const { theme } = useTheme();
-
-  // ssr에서 말고 클라이언트 측에서 렌더링 되고 나서 아이콘을 렌더링하도록 설정
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   if (!mounted) return null;
 

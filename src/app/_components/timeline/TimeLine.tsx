@@ -1,18 +1,13 @@
 "use client";
 import styles from "@/app/_styles/components/timeline/TimeLine.module.css";
+import useMount from "@/app/hooks/useMount";
 import { timeLineData } from "@/data/timeLineData";
 import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
 
 export default function ProjectTimeLine() {
-  const [mounted, setMounted] = useState(false);
+  const mounted = useMount();
   const { theme } = useTheme();
-
-  // ssr에서 말고 클라이언트 측에서 렌더링 되고 나서 스타일 렌더링하도록 설정
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   if (!mounted) return null;
 

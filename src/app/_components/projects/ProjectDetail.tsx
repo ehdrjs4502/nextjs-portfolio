@@ -6,9 +6,10 @@ import GithubLink from "@/components/links/GithubLink";
 import PageLink from "@/components/links/PageLink";
 import { Tooltip } from "@mui/material";
 import { useTheme } from "next-themes";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useRef } from "react";
 import { ArrowForwardIos, ArrowBackIosNew } from "@mui/icons-material";
 import "@/styles/components/projects/slick.css";
+import useMount from "@/app/hooks/useMount";
 
 // props 타입 부모에 있는 Project 타입으로 설정
 type ProjectProps = {
@@ -16,17 +17,12 @@ type ProjectProps = {
 };
 
 export default function ProjectDetail({ project }: ProjectProps) {
-  const [mounted, setMounted] = useState(false);
+  const mounted = useMount();
   const { theme } = useTheme();
   const slickRef = useRef<Slider>(null); // 슬라이더에 쓸거니 <Slider> 타입
 
   const previous = useCallback(() => slickRef.current?.slickPrev(), []);
   const next = useCallback(() => slickRef.current?.slickNext(), []);
-
-  // ssr에서 말고 클라이언트 측에서 렌더링 되고 나서 스타일 렌더링하도록 설정
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   if (!mounted) return null;
 

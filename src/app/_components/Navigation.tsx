@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styles from "@/styles/components/Navigation.module.css";
 import { useTheme } from "next-themes";
 import { LightMode, DarkMode } from "@mui/icons-material";
+import useMount from "../hooks/useMount";
 
 interface NavigationProps {
   refs: {
@@ -16,7 +17,7 @@ const Navigation: React.FC<NavigationProps> = ({ refs }) => {
   const { theme, setTheme } = useTheme(); // 테마 설정
   const [selectedSection, setSelectedSection] = useState<string | null>(null); // nav 선택한 섹션
   const [isClick, setIsClick] = useState<boolean>(false); // 햄버거 클릭했는지
-  const [mounted, setMounted] = useState(false);
+  const mounted = useMount();
 
   // 해당 ref로 이동하는 함수
   const scrollToRef = (ref: React.RefObject<HTMLDivElement>, sectionName: string) => {
@@ -30,11 +31,6 @@ const Navigation: React.FC<NavigationProps> = ({ refs }) => {
     if (isClick && theme === "dark") return styles.showBoxDark;
     return "";
   };
-
-  // ssr에서 말고 클라이언트 측에서 렌더링 되고 나서 아이콘을 렌더링하도록 설정
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   if (!mounted) return null;
 
