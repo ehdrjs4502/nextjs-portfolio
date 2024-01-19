@@ -5,8 +5,7 @@ import ReactjsIcon from "@/svgs/react-color.svg";
 import NodejsIcon from "@/svgs/nodedotjs-color.svg";
 import MySQLIcon from "@/svgs/mysql-color.svg";
 import SeleniumIcon from "@/svgs/selenium-color.svg";
-import { useTheme } from "next-themes";
-import useMount from "../hooks/useMount";
+import DarkModeIcon from "@/components/icons/DarkModeIcon";
 
 // 데이터 타입 지정
 export type Project = {
@@ -16,21 +15,6 @@ export type Project = {
   skills: { name: string; icon: ReactNode }[];
   links: string[];
   imgs: string[];
-};
-
-type DarkModeIconProps = {
-  lightIcon: React.ReactNode;
-  darkIcon: React.ReactNode;
-};
-
-// 테마에 따라서 아이콘 변경
-const DarkModeIcon: React.FC<DarkModeIconProps> = ({ lightIcon, darkIcon }) => {
-  const mounted = useMount();
-  const { theme } = useTheme();
-
-  if (!mounted) return null;
-
-  return theme === "dark" ? darkIcon : lightIcon;
 };
 
 export const projectDetailsData: Project[] = [

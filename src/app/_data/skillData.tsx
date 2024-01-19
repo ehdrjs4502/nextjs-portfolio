@@ -9,8 +9,7 @@ import NotionIcon from "@/svgs/notion-color.svg";
 import FigmaIcon from "@/svgs/figma-color.svg";
 import GithubIcon from "@/svgs/github-color.svg";
 import TSIcon from "@/svgs/typescript-color.svg";
-import { useTheme } from "next-themes";
-import useMount from "../hooks/useMount";
+import DarkModeIcon from "@/components/icons/DarkModeIcon";
 
 type Skill = {
   name: string;
@@ -25,21 +24,6 @@ type Etc = {
 export type SkillData = {
   skills: Skill[];
   etcs: Etc[];
-};
-
-type DarkModeIconProps = {
-  lightIcon: React.ReactNode;
-  darkIcon: React.ReactNode;
-};
-
-// 테마에 따라서 아이콘 변경
-const DarkModeIcon: React.FC<DarkModeIconProps> = ({ lightIcon, darkIcon }) => {
-  const mounted = useMount();
-  const { theme } = useTheme();
-
-  if (!mounted) return null;
-
-  return theme === "dark" ? darkIcon : lightIcon;
 };
 
 export const skillData: SkillData = {
