@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 import styles from "@/styles/components/Navigation.module.css";
 import { useTheme } from "next-themes";
