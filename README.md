@@ -13,7 +13,7 @@ Next.js + TypeScript 개인 포트폴리오 사이트
 
 반응형 웹과 애니메이션 작업을 중점적으로 진행하였습니다.
 
-📎[사이트 링크](https://donggeon-nextjs-portfolio.vercel.app/)
+📎[사이트 링크](https://donggeon-portfolio.vercel.app/)
 
 
 ## ⏱개발 기간
